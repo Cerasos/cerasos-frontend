@@ -2,7 +2,7 @@ import React from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Linkedin, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Globe, Instagram } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -10,11 +10,11 @@ const ContactSection = () => {
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 font-sans text-4xl font-bold text-foreground md:text-5xl">
-            Contact Us
+            Fale com a Gente
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Ready to transform your business? Get in touch with our team to
-            discuss how we can help you achieve your goals.
+            Pronto para tirar sua ideia do papel ou acelerar seu negócio? Nosso
+            time está aqui para ajudar.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ const ContactSection = () => {
                 Email
               </h3>
               <p className="mb-3 text-muted-foreground">
-                Reach out for inquiries and support
+                Entre em contato para dúvidas e suporte
               </p>
               <a
                 href="mailto:contact@company.com"
@@ -45,10 +45,10 @@ const ContactSection = () => {
                 <Phone className="h-6 w-6 text-accent" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-card-foreground">
-                Phone
+                Telefone
               </h3>
               <p className="mb-3 text-muted-foreground">
-                Speak with our sales team
+                Converse direto com nosso time
               </p>
               <a
                 href="tel:+18005551234"
@@ -65,21 +65,28 @@ const ContactSection = () => {
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-card-foreground">
-                Headquarters
+                Escritório
               </h3>
-              <p className="text-muted-foreground">
-                123 Business Avenue, Suite 500, San Francisco, CA 94105
+              <p className="mb-3 text-muted-foreground">
+                Onde a inovação acontece
               </p>
+              <a
+                href="tel:+18005551234"
+                className="text-primary hover:text-primary/80 transition-colors"
+              >
+                123 Business Avenue, Suite 500, San Francisco, CA 94105
+              </a>
             </CardContent>
           </Card>
         </div>
 
         <div className="mt-12 rounded-lg bg-card p-8 text-center">
           <h3 className="mb-4 text-2xl font-bold text-card-foreground">
-            Connect With Us
+            Conecte-se com a gente
           </h3>
           <p className="mb-6 text-muted-foreground">
-            Follow us to stay updated on the latest news and insights
+            Acompanhe novidades, tendências e conteúdos exclusivos nas nossas
+            redes
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="outline" size="lg" asChild>
@@ -100,6 +107,16 @@ const ContactSection = () => {
               >
                 <Globe className="mr-2 h-5 w-5" />
                 Website
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a
+                href="https://company.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="mr-2 h-5 w-5" />
+                Instagram
               </a>
             </Button>
           </div>

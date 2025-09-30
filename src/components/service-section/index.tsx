@@ -21,110 +21,184 @@ import {
 import { Card, CardContent } from "../ui/card";
 
 const floatingWords = [
-  "Cloud Solutions",
-  "AI Integration",
-  "Data Analytics",
-  "Cybersecurity",
-  "DevOps",
-  "Consulting",
-  "Digital Transformation",
-  "API Development",
-  "Mobile Apps",
-  "Web Development",
-  "Automation",
+  // Core Tech
+  "Soluções em Nuvem",
+  "Integração de IA",
   "Machine Learning",
+  "Deep Learning",
   "Blockchain",
-  "IoT Solutions",
-  "Microservices",
-  "Serverless",
+  "Criptografia",
+  "Cibersegurança",
   "Big Data",
+  "Análise de Dados",
+  "Business Intelligence",
   "Edge Computing",
+  "Quantum Computing",
+
+  // Dev & Infra
+  "DevOps",
+  "CI/CD",
   "Kubernetes",
   "Docker",
-  "CI/CD",
+  "Serverless",
+  "Microsserviços",
   "Cloud Native",
+  "Infraestrutura",
+  "API First",
+  "RESTful APIs",
+  "GraphQL",
+  "Open Source",
+
+  // Produtos Digitais
+  "Web Apps",
+  "Apps Mobile",
+  "UX/UI",
+  "Design System",
+  "Prototipagem",
+  "MVP",
+  "Escalabilidade",
+  "Low Code",
+  "No Code",
+  "Progressive Web Apps",
+  "Front-end",
+  "Back-end",
+  "Full Stack",
+
+  // Automação & Dados
+  "Automação",
+  "RPA",
+  "Data Lake",
+  "Data Warehouse",
+  "ETL",
+  "Streaming Data",
+  "Predictive Analytics",
+  "Data Science",
+  "DataOps",
+  "Observabilidade",
+  "Monitoramento",
+
+  // Negócios & Startup Culture
+  "Transformação Digital",
+  "Growth Hacking",
+  "Lean Startup",
+  "Agilidade",
+  "Design Thinking",
+  "OKRs",
+  "Escalabilidade",
+  "Customer Centric",
+  "Disrupção",
+  "Innovation",
+  "Product Market Fit",
+  "Go To Market",
+
+  // Cloud & Serviços
   "SaaS",
   "PaaS",
-  "Infrastructure",
+  "IaaS",
+  "FinOps",
+  "Multi-Cloud",
+  "Hybrid Cloud",
+  "Edge Services",
+  "API Economy",
 ];
 
 const services = [
   {
     icon: Cloud,
-    title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure",
+    title: "Soluções em Nuvem",
+    description: "Infraestrutura flexível e escalável",
   },
   {
     icon: Zap,
-    title: "AI Integration",
-    description: "Smart automation solutions",
+    title: "Integração de IA",
+    description: "Automação inteligente para acelerar resultados",
   },
   {
     icon: Database,
-    title: "Data Analytics",
-    description: "Insights that drive decisions",
+    title: "Análise de Dados",
+    description: "Insights que geram impacto real",
   },
   {
     icon: Lock,
-    title: "Cybersecurity",
-    description: "Enterprise-grade protection",
+    title: "Cibersegurança",
+    description: "Proteção digital para o seu negócio",
   },
   {
     icon: Code,
-    title: "Web Development",
-    description: "Modern web applications",
+    title: "Web Apps",
+    description: "Aplicações modernas e performáticas",
   },
   {
     icon: Smartphone,
-    title: "Mobile Apps",
-    description: "iOS and Android solutions",
+    title: "Apps Mobile",
+    description: "Experiências nativas para iOS e Android",
   },
   {
     icon: BarChart,
     title: "Business Intelligence",
-    description: "Data-driven strategies",
+    description: "Estratégias orientadas por dados",
   },
   {
     icon: Users,
-    title: "Consulting",
-    description: "Expert guidance and support",
+    title: "Consultoria",
+    description: "Mentoria e suporte especializado",
   },
-  { icon: Cpu, title: "DevOps", description: "Streamlined deployment" },
+  {
+    icon: Cpu,
+    title: "DevOps",
+    description: "Entrega rápida e sem fricção",
+  },
   {
     icon: Globe,
-    title: "Digital Transformation",
-    description: "Modernize your business",
+    title: "Transformação Digital",
+    description: "Leve sua empresa para o futuro",
   },
-  { icon: Shield, title: "Compliance", description: "Regulatory adherence" },
+  {
+    icon: Shield,
+    title: "Compliance",
+    description: "Conformidade de forma simples",
+  },
   {
     icon: Layers,
-    title: "System Integration",
-    description: "Seamless connectivity",
+    title: "Integração de Sistemas",
+    description: "Conexões ágeis entre plataformas",
   },
   {
     icon: Workflow,
-    title: "Process Automation",
-    description: "Efficient workflows",
+    title: "Automação de Processos",
+    description: "Fluxos mais simples e eficientes",
   },
   {
     icon: Server,
-    title: "Infrastructure",
-    description: "Robust server solutions",
+    title: "Infraestrutura",
+    description: "Servidores robustos e escaláveis",
   },
-  { icon: GitBranch, title: "Version Control", description: "Code management" },
-  { icon: Package, title: "Deployment", description: "Continuous delivery" },
-  { icon: Code, title: "API Development", description: "RESTful services" },
+  {
+    icon: GitBranch,
+    title: "Controle de Versão",
+    description: "Gestão de código prática e segura",
+  },
+  {
+    icon: Package,
+    title: "Deploy",
+    description: "Entrega contínua sem complicações",
+  },
+  {
+    icon: Code,
+    title: "Desenvolvimento de APIs",
+    description: "APIs REST para integrar tudo",
+  },
   {
     icon: Database,
-    title: "Database Design",
-    description: "Optimized data storage",
+    title: "Banco de Dados",
+    description: "Armazenamento otimizado e inteligente",
   },
 ];
 
 const ServiceSection = () => {
   return (
     <section id="about" className="relative overflow-hidden bg-card px-4 py-20">
-      <div className="absolute inset-0 overflow-hidden opacity-5">
+      <div className="absolute inset-0 overflow-hidden opacity-20">
         {floatingWords.map((word, index) => (
           <div
             key={index}
@@ -144,10 +218,11 @@ const ServiceSection = () => {
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 font-sans text-4xl font-bold text-card-foreground md:text-5xl">
-            Our Services
+            O que fazemos por você
           </h2>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Comprehensive solutions tailored to your business needs
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            Do desenvolvimento ao crescimento: serviços completos para acelerar
+            sua jornada digital
           </p>
         </div>
 
