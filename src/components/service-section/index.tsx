@@ -197,12 +197,15 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <section id="about" className="relative overflow-hidden bg-card px-4 py-20">
+    <section
+      id="services"
+      className="relative overflow-hidden bg-card px-4 py-20"
+    >
       <div className="absolute inset-0 overflow-hidden opacity-15">
         {floatingWords.map((word, index) => (
           <div
             key={index}
-            className="absolute animate-float font-sans text-sm font-bold text-foreground md:text-lg"
+            className="absolute animate-float font-sans text-sm font-bold text-foreground md:text-lg select-none"
             style={{
               left: `${(index * 23) % 100}%`,
               top: `${(index * 17) % 100}%`,

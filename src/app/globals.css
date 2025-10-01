@@ -44,6 +44,7 @@
 }
 
 :root {
+  scroll-behavior: smooth;
   --radius: 0.625rem;
   --background: oklch(0.99 0 0); /* #fafafa light gray */
   --foreground: oklch(0.25 0 0); /* #1f2937 dark gray */
@@ -53,7 +54,8 @@
   --popover-foreground: oklch(0.13 0.028 261.692);
   --blueeee: oklch(0.944 0.186 179.9);
   --bluuuu: oklch(0.453 0.257 206.3);
-  --primary: oklch(0.25 0.15 15); /* #5A051A burgundy */
+  --primary: oklch(0.944 0.186 179.9); /* #5A051A burgundy */
+  /* --primary: oklch(0.25 0.15 15) */
   --primary-foreground: oklch(1 0 0); /* #ffffff */
   --secondary: oklch(0.967 0.003 264.542);
   --secondary-foreground: oklch(0.21 0.034 264.665);
