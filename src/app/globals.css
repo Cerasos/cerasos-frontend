@@ -43,10 +43,6 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-.cherry {
-  color: #5a051a;
-}
-
 :root {
   --radius: 0.625rem;
   --background: oklch(0.99 0 0); /* #fafafa light gray */
@@ -55,6 +51,8 @@
   --card-foreground: oklch(0.13 0.028 261.692);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.028 261.692);
+  --blueeee: oklch(0.944 0.186 179.9);
+  --bluuuu: oklch(0.453 0.257 206.3);
   --primary: oklch(0.25 0.15 15); /* #5A051A burgundy */
   --primary-foreground: oklch(1 0 0); /* #ffffff */
   --secondary: oklch(0.967 0.003 264.542);

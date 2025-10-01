@@ -198,7 +198,7 @@ const services = [
 const ServiceSection = () => {
   return (
     <section id="about" className="relative overflow-hidden bg-card px-4 py-20">
-      <div className="absolute inset-0 overflow-hidden opacity-20">
+      <div className="absolute inset-0 overflow-hidden opacity-15">
         {floatingWords.map((word, index) => (
           <div
             key={index}
@@ -216,7 +216,8 @@ const ServiceSection = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="mb-12 text-center">
+        <div className="mb-12 p-10 text-center bg-[radial-gradient(ellipse_at_center,var(--background)_40%,transparent_80%)]">
+          {/*  */}
           <h2 className="mb-4 font-sans text-4xl font-bold text-card-foreground md:text-5xl">
             O que fazemos por você
           </h2>
