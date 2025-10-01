@@ -1,226 +1,179 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
-import {
-  Users,
-  Zap,
-  Cloud,
-  Database,
-  Lock,
-  Code,
-  Smartphone,
-  BarChart,
-  Cpu,
-  Globe,
-  Shield,
-  Layers,
-  Workflow,
-  Server,
-  GitBranch,
-  Package,
-} from "lucide-react";
-import { Card, CardContent } from "../ui/card";
-
-const floatingWords = [
-  // Core Tech
-  "Soluções em Nuvem",
-  "Integração de IA",
-  "Machine Learning",
-  "Deep Learning",
-  "Blockchain",
-  "Criptografia",
-  "Cibersegurança",
-  "Big Data",
-  "Análise de Dados",
-  "Business Intelligence",
-  "Edge Computing",
-  "Quantum Computing",
-
-  // Dev & Infra
-  "DevOps",
-  "CI/CD",
-  "Kubernetes",
-  "Docker",
-  "Serverless",
-  "Microsserviços",
-  "Cloud Native",
-  "Infraestrutura",
-  "API First",
-  "RESTful APIs",
-  "GraphQL",
-  "Open Source",
-
-  // Produtos Digitais
-  "Web Apps",
-  "Apps Mobile",
-  "UX/UI",
-  "Design System",
-  "Prototipagem",
-  "MVP",
-  "Escalabilidade",
-  "Low Code",
-  "No Code",
-  "Progressive Web Apps",
-  "Front-end",
-  "Back-end",
-  "Full Stack",
-
-  // Automação & Dados
-  "Automação",
-  "RPA",
-  "Data Lake",
-  "Data Warehouse",
-  "ETL",
-  "Streaming Data",
-  "Predictive Analytics",
-  "Data Science",
-  "DataOps",
-  "Observabilidade",
-  "Monitoramento",
-
-  // Negócios & Startup Culture
-  "Transformação Digital",
-  "Growth Hacking",
-  "Lean Startup",
-  "Agilidade",
-  "Design Thinking",
-  "OKRs",
-  "Escalabilidade",
-  "Customer Centric",
-  "Disrupção",
-  "Innovation",
-  "Product Market Fit",
-  "Go To Market",
-
-  // Cloud & Serviços
-  "SaaS",
-  "PaaS",
-  "IaaS",
-  "FinOps",
-  "Multi-Cloud",
-  "Hybrid Cloud",
-  "Edge Services",
-  "API Economy",
-];
+import ServiceCard from "./_components/service-card";
 
 const services = [
   {
-    icon: Cloud,
+    icon: "cloud",
     title: "Soluções em Nuvem",
-    description: "Infraestrutura flexível e escalável",
+    description: "Infraestrutura em nuvem escalável",
+    details:
+      "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
   },
   {
-    icon: Zap,
+    icon: "zap",
     title: "Integração de IA",
-    description: "Automação inteligente para acelerar resultados",
+    description: "Soluções de automação inteligente",
+    details:
+      "Aproveite o poder da inteligência artificial e machine learning para automatizar processos, obter insights e aprimorar a tomada de decisões. De processamento de linguagem natural à visão computacional, integramos IA de forma fluida nos seus fluxos de trabalho.",
   },
   {
-    icon: Database,
+    icon: "database",
     title: "Análise de Dados",
-    description: "Insights que geram impacto real",
+    description: "Insights que impulsionam decisões",
+    details:
+      "Transforme dados brutos em insights acionáveis com análises avançadas, visualizações e relatórios. Nossa equipe de ciência de dados ajuda a identificar tendências, prever resultados e tomar decisões baseadas em dados.",
   },
   {
-    icon: Lock,
+    icon: "lock",
     title: "Cibersegurança",
-    description: "Proteção digital para o seu negócio",
+    description: "Proteção de nível empresarial",
+    details:
+      "Proteja seus ativos digitais com soluções completas de segurança, incluindo testes de penetração, avaliações de vulnerabilidades, auditorias e monitoramento 24/7 para prevenir e responder a ameaças.",
   },
   {
-    icon: Code,
-    title: "Web Apps",
-    description: "Aplicações modernas e performáticas",
+    icon: "code",
+    title: "Desenvolvimento Web",
+    description: "Aplicações web modernas",
+    details:
+      "Crie aplicações web responsivas e de alto desempenho utilizando as tecnologias e frameworks mais recentes. De single-page apps a portais empresariais complexos, entregamos experiências de usuário excepcionais.",
   },
   {
-    icon: Smartphone,
-    title: "Apps Mobile",
-    description: "Experiências nativas para iOS e Android",
+    icon: "smartphone",
+    title: "Aplicativos Mobile",
+    description: "Soluções iOS e Android",
+    details:
+      "Desenvolvemos aplicativos nativos e multiplataforma que engajam usuários e impulsionam o crescimento do seu negócio. Nossas soluções mobile são otimizadas para performance, usabilidade e integração perfeita com seus sistemas.",
   },
   {
-    icon: BarChart,
+    icon: "bar-chart",
     title: "Business Intelligence",
-    description: "Estratégias orientadas por dados",
+    description: "Estratégias baseadas em dados",
+    details:
+      "Implemente soluções de BI poderosas que fornecem visibilidade em tempo real das operações. Criamos dashboards personalizados, relatórios e análises que capacitam sua equipe a tomar decisões informadas.",
   },
   {
-    icon: Users,
+    icon: "users",
     title: "Consultoria",
-    description: "Mentoria e suporte especializado",
+    description: "Orientação e suporte especializado",
+    details:
+      "Aproveite nossa experiência com consultoria estratégica em tecnologia. Ajudamos sua empresa na transformação digital, otimização de processos e implementação de melhores práticas para atingir objetivos de negócio.",
   },
   {
-    icon: Cpu,
+    icon: "cloud",
+    title: "Soluções em Nuvem",
+    description: "Infraestrutura em nuvem escalável",
+    details:
+      "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
+  },
+  {
+    icon: "zap",
+    title: "Integração de IA",
+    description: "Soluções de automação inteligente",
+    details:
+      "Aproveite o poder da inteligência artificial e machine learning para automatizar processos, obter insights e aprimorar a tomada de decisões. De processamento de linguagem natural à visão computacional, integramos IA de forma fluida nos seus fluxos de trabalho.",
+  },
+  {
+    icon: "database",
+    title: "Análise de Dados",
+    description: "Insights que impulsionam decisões",
+    details:
+      "Transforme dados brutos em insights acionáveis com análises avançadas, visualizações e relatórios. Nossa equipe de ciência de dados ajuda a identificar tendências, prever resultados e tomar decisões baseadas em dados.",
+  },
+  {
+    icon: "cpu",
     title: "DevOps",
-    description: "Entrega rápida e sem fricção",
+    description: "Implantações ágeis e seguras",
+    details:
+      "Acelere seu ciclo de desenvolvimento com práticas modernas de DevOps. Implementamos pipelines de CI/CD, infraestrutura como código e testes automatizados para entregas mais rápidas e confiáveis.",
   },
   {
-    icon: Globe,
+    icon: "globe",
     title: "Transformação Digital",
-    description: "Leve sua empresa para o futuro",
+    description: "Modernize sua empresa",
+    details:
+      "Guiamos sua organização em estratégias de transformação digital que modernizam operações, melhoram a experiência do cliente e criam novas fontes de receita por meio da tecnologia.",
   },
   {
-    icon: Shield,
-    title: "Compliance",
-    description: "Conformidade de forma simples",
+    icon: "shield",
+    title: "Conformidade",
+    description: "Adesão regulatória",
+    details:
+      "Garanta que seus sistemas atendam aos padrões da indústria e regulamentações como GDPR, HIPAA e SOC 2. Fornecemos auditorias de conformidade, documentação e monitoramento contínuo.",
   },
   {
-    icon: Layers,
+    icon: "layers",
     title: "Integração de Sistemas",
-    description: "Conexões ágeis entre plataformas",
+    description: "Conectividade sem falhas",
+    details:
+      "Conecte sistemas e aplicações diferentes para criar um ecossistema tecnológico unificado. Nossas soluções garantem fluxo de dados eficiente e automação de processos em toda a infraestrutura.",
   },
   {
-    icon: Workflow,
+    icon: "workflow",
     title: "Automação de Processos",
-    description: "Fluxos mais simples e eficientes",
+    description: "Fluxos de trabalho eficientes",
+    details:
+      "Elimine tarefas manuais e otimize operações com automação inteligente. De RPA a orquestração de workflows, ajudamos sua empresa a fazer mais com menos.",
   },
   {
-    icon: Server,
+    icon: "server",
     title: "Infraestrutura",
-    description: "Servidores robustos e escaláveis",
+    description: "Soluções robustas de servidores",
+    details:
+      "Projetamos e gerenciamos infraestruturas confiáveis que crescem junto com o seu negócio. Oferecemos soluções on-premise, em nuvem e híbridas, com alta disponibilidade e recuperação de desastres.",
   },
   {
-    icon: GitBranch,
+    icon: "git-branch",
     title: "Controle de Versão",
-    description: "Gestão de código prática e segura",
+    description: "Gestão de código",
+    details:
+      "Implemente boas práticas de versionamento com workflows Git, estratégias de branching e ferramentas de colaboração que mantêm sua equipe de desenvolvimento produtiva e organizada.",
   },
   {
-    icon: Package,
+    icon: "package",
     title: "Deploy",
-    description: "Entrega contínua sem complicações",
+    description: "Entrega contínua",
+    details:
+      "Implemente pipelines de deploy automatizados para entregas mais rápidas e seguras. Adotamos blue-green deployments, canary releases e estratégias de rollback para atualizações sem downtime.",
   },
   {
-    icon: Code,
+    icon: "code",
     title: "Desenvolvimento de APIs",
-    description: "APIs REST para integrar tudo",
+    description: "Serviços RESTful",
+    details:
+      "Criamos APIs robustas e escaláveis que alimentam suas aplicações e permitem integrações de terceiros. Projetamos APIs RESTful e GraphQL com documentação completa e segurança reforçada.",
   },
   {
-    icon: Database,
-    title: "Banco de Dados",
-    description: "Armazenamento otimizado e inteligente",
+    icon: "database",
+    title: "Modelagem de Banco de Dados",
+    description: "Armazenamento de dados otimizado",
+    details:
+      "Desenhamos esquemas de banco de dados eficientes e otimizamos a performance de consultas para SQL e NoSQL. Garantimos que sua camada de dados seja escalável, segura e de alta performance.",
   },
 ];
 
 const ServiceSection = () => {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [orderedServices, setOrderedServices] = useState<typeof services>([]);
+
+  const displayServices =
+    orderedServices.length > 0 ? orderedServices : services;
+
+  const handleCardClick = (index: number) => {
+    const clickedService = displayServices[index];
+    const remainingServices = displayServices.filter((_, i) => i !== index);
+    remainingServices.splice(2, 0, clickedService);
+    setOrderedServices(remainingServices);
+    setExpandedCard(2); // Always expand the first card after reordering
+  };
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-card px-4 py-20"
+      className="relative overflow-hidden bg-card px-4 py-4"
     >
-      <div className="absolute inset-0 overflow-hidden opacity-15">
-        {floatingWords.map((word, index) => (
-          <div
-            key={index}
-            className="absolute animate-float font-sans text-sm font-bold text-foreground md:text-lg select-none"
-            style={{
-              left: `${(index * 23) % 100}%`,
-              top: `${(index * 17) % 100}%`,
-              animationDelay: `${index * 0.5}s`,
-              animationDuration: `${15 + (index % 5) * 2}s`,
-            }}
-          >
-            {word}
-          </div>
-        ))}
-      </div>
-
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-12 p-10 text-center bg-[radial-gradient(ellipse_at_center,var(--background)_40%,transparent_80%)]">
-          {/*  */}
           <h2 className="mb-4 font-sans text-4xl font-bold text-card-foreground md:text-5xl">
             O que fazemos por você
           </h2>
@@ -230,22 +183,25 @@ const ServiceSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-3 md:grid-cols-6">
-          {services.map((service, index) => (
-            <Card key={index} className="border-border bg-background">
-              <CardContent className="flex flex-col items-center p-3 text-center">
-                <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
-                  <service.icon className="h-4 w-4 text-primary" />
-                </div>
-                <h3 className="mb-1 text-xs font-bold text-foreground">
-                  {service.title}
-                </h3>
-                <p className="text-[10px] leading-tight text-muted-foreground">
-                  {service.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-h-[510px] overflow-hidden">
+          <div
+            className="grid auto-rows-fr grid-cols-3 gap-3 md:grid-cols-6"
+            style={{ gridAutoFlow: "dense" }}
+          >
+            {displayServices.map((service, index) => (
+              <ServiceCard
+                index={index}
+                expandedCard={expandedCard}
+                setExpandedCard={setExpandedCard}
+                handleCardClick={handleCardClick}
+                key={`service-card-${index}`}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                details={service.details}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
