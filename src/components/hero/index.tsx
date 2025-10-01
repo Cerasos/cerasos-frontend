@@ -1,6 +1,4 @@
 "use client";
-
-import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
 export function Hero() {
@@ -16,7 +14,6 @@ export function Hero() {
     <section className="relative flex flex-col min-h-screen items-center justify-center px-4 py-20">
       <div className="overflow-hidden bg-[url('/assets/bg.png')] bg-gradient-to-b from-background to-muted absolute inset-0 bg-cover bg-bottom blur-[2px]" />
       <div className="relative z-10 mx-auto max-w-4xl text-center">
-        {/* bg-radial from-white/10 to-white/0 backdrop-blur-md p-4 border-white/20 border-[1px] rounded-xl*/}
         <h1 className="mb-6 font-sans text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl text-white">
           Transformando{" "}
           <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200">
