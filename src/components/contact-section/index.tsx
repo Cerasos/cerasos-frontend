@@ -2,7 +2,7 @@ import React from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Linkedin, Globe, Instagram } from "lucide-react";
+import { Mail, Phone, Linkedin, Globe, Instagram } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -55,26 +55,6 @@ const ContactSection = () => {
                 className="text-primary hover:text-primary/80 transition-colors"
               >
                 +1 (800) 555-1234
-              </a>
-            </CardContent>
-          </Card>
-
-          <Card className="border-border bg-card md:col-span-2">
-            <CardContent className="p-6">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                <MapPin className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-card-foreground">
-                Escritório
-              </h3>
-              <p className="mb-3 text-muted-foreground">
-                Onde a inovação acontece
-              </p>
-              <a
-                href="tel:+18005551234"
-                className="text-primary hover:text-primary/80 transition-colors"
-              >
-                123 Business Avenue, Suite 500, San Francisco, CA 94105
               </a>
             </CardContent>
           </Card>
