@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={` ${roboto.className} antialiased scroll-smooth`}>
+      <body
+        className={` ${roboto.className} antialiased scroll-smooth overflow-x-hidden`}
+      >
         {children}
       </body>
     </html>

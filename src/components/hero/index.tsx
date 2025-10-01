@@ -1,6 +1,14 @@
 "use client";
 import { ArrowDown } from "lucide-react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Scrollbar, Navigation } from "swiper/modules";
+import "swiper/css/scrollbar";
+
 export function Hero() {
   const scrollToServices = () => {
     const el = document.getElementById("services");
@@ -11,42 +19,82 @@ export function Hero() {
   };
 
   return (
-    <section className="relative flex flex-col min-h-screen items-center justify-center px-4 py-20">
-      <div className="overflow-hidden bg-[url('/assets/bg.png')] bg-gradient-to-b from-background to-muted absolute inset-0 bg-cover bg-bottom blur-[2px]" />
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <h1 className="mb-6 font-sans text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl text-white">
-          Transformando{" "}
-          <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200">
-            Negócios
-          </span>{" "}
-          Através da Inovação
-        </h1>
+    <section className="relative h-screen w-screen overflow-hidden">
+      <Swiper
+        className="relative flex flex-col min-h-screen h-screen max-h-screen items-center justify-center px-4 py-20 overflow-hidden"
+        slidesPerView={1}
+        spaceBetween={50}
+        scrollbar={{
+          hide: true,
+        }}
+        navigation={{ enabled: true }}
+        modules={[Navigation, Scrollbar]}
+      >
+        <SwiperSlide className="max-h-screen h-screen w-full flex flex-col relative items-center justify-center px-4 py-20 overflow-hidden">
+          <div className="overflow-hidden bg-[url('/assets/bg.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px] overflow-hidden" />
+          <div className="relative z-10 mx-auto max-w-4xl text-center h-full flex flex-col items-center justify-center overflow-hidden">
+            <h1 className="mb-6 font-sans text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl text-white">
+              Transformando{" "}
+              <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 overflow-hidden">
+                Negócios
+              </span>{" "}
+              Através da Inovação
+            </h1>
 
-        <p className="mb-8 text-lg leading-relaxed text-white md:text-xl ">
-          Impulsionamos organizações com soluções tecnológicas avançadas que
-          promovem crescimento, eficiência e sucesso sustentável na era digital
-        </p>
+            <p className="mb-8 text-lg leading-relaxed text-white md:text-xl overflow-hidden">
+              Impulsionamos organizações com soluções tecnológicas avançadas que
+              promovem crescimento, eficiência e sucesso sustentável na era
+              digital
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="relative h-screen w-full flex items-end justify-end mr-auto px-4 py-20 overflow-hidden ">
+          <div className="overflow-hidden bg-[url('/assets/bg-2.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[5px]" />
+          <div className="relative z-10 h-full flex flex-col overflow-hidden ml-auto max-w-xl text-left">
+            <h1 className="mb-6 text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl text-white">
+              Transformando{" "}
+              <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 overflow-hidden">
+                Negócios
+              </span>{" "}
+              Através da Inovação
+            </h1>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          {/* <Button
-            size="lg"
-            className="w-full shadow-lg sm:w-auto"
-            onClick={scrollToContact}
-          >
-            Fale com Especialista
-          </Button> */}
-        </div>
-      </div>
+            <p className="mb-8 text-lg leading-relaxed text-white md:text-xl overflow-hidden">
+              Impulsionamos organizações com soluções tecnológicas avançadas que
+              promovem crescimento, eficiência e sucesso sustentável na era
+              digital
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="max-h-screen h-screen w-full flex flex-col relative items-center justify-center px-4 py-20 overflow-hidden">
+          <div className="overflow-hidden bg-[url('/assets/bg-4.jpg')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px]" />
+          <div className="relative z-10 mx-auto max-w-4xl text-center h-full flex flex-col items-center justify-end overflow-hidden">
+            <h1 className="mb-6 font-sans text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl text-white">
+              Transformando{" "}
+              <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 overflow-hidden">
+                Negócios
+              </span>{" "}
+              Através da Inovação
+            </h1>
 
-      <div className="mb-6 inline-block rounded-full border border-border bg-card px-4 py-2 shadow-sm absolute bottom-16 left-1/2 z-10 -translate-x-1/2">
+            <p className="mb-8 text-lg leading-relaxed text-white md:text-xl overflow-hidden">
+              Impulsionamos organizações com soluções tecnológicas avançadas que
+              promovem crescimento, eficiência e sucesso sustentável na era
+              digital
+            </p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
+      {/* <div className="mb-6 inline-block rounded-full border border-border bg-card px-4 py-2 shadow-sm absolute bottom-16 left-1/2 z-10 -translate-x-1/2 overflow-hidden">
         <span className="text-sm font-medium text-muted-foreground">
           Soluções Tecnológicas
         </span>
-      </div>
+      </div> */}
 
       <button
         onClick={scrollToServices}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce text-muted-foreground transition-colors hover:text-primary"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce text-white transition-colors hover:text-primary cursor-pointer overflow-hidden"
         aria-label="Scroll to about section"
       >
         <ArrowDown className="h-6 w-6" />
