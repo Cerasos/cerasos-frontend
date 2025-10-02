@@ -1,13 +1,14 @@
 "use client";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ChevronLeft, ChevronRight } from "lucide-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+import "../../app/globals.css";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Scrollbar, Navigation } from "swiper/modules";
-import "swiper/css/scrollbar";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 
 export function Hero() {
   const scrollToServices = () => {
@@ -20,15 +21,27 @@ export function Hero() {
 
   return (
     <section className="relative h-screen w-screen overflow-hidden">
+      <button className="custom-prev absolute  left-2 top-1/2 z-10 -translate-y-1/2 bg-black/20 p-2 rounded-full hover:bg-black/50 cursor-pointer duration-300 transition-transform">
+        <ChevronLeft className="text-primary w-6 h-6" />
+      </button>
+      <button className="custom-next absolute  right-6 top-1/2 z-10 -translate-y-1/2 bg-black/20 p-2 rounded-full hover:bg-black/50 cursor-pointer duration-300 transition-transform">
+        <ChevronRight className="text-primary w-6 h-6" />
+      </button>
+      <div className="custom-pagination absolute bottom-2 flex gap-2" />
       <Swiper
         className="relative flex flex-col min-h-screen h-screen max-h-screen items-center justify-center px-4 py-20 overflow-hidden"
         slidesPerView={1}
         spaceBetween={50}
-        scrollbar={{
-          hide: true,
+        loop
+        pagination={{
+          el: ".custom-pagination",
+          clickable: true,
         }}
-        navigation={{ enabled: true }}
-        modules={[Navigation, Scrollbar]}
+        navigation={{
+          prevEl: ".custom-prev",
+          nextEl: ".custom-next",
+        }}
+        modules={[Navigation, Pagination]}
       >
         <SwiperSlide className="max-h-screen h-screen w-full flex flex-col relative items-center justify-center px-4 py-20 overflow-hidden">
           <div className="overflow-hidden bg-[url('/assets/bg.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px] overflow-hidden" />
