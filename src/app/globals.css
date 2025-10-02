@@ -143,24 +143,3 @@
 .animate-float {
   animation: float linear infinite;
 }
-
-/* .swiper-button-next {
-  color: oklch(0.944 0.186 179.9); 
-  background: rgba(0, 0, 0, 0.5); 
-  padding: 2px;
-  border-radius: 50%;
-  margin-left: 40px;
-}
-
-.swiper-button-prev {
-  display: flex;
-  color: oklch(0.944 0.186 179.9); 
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-} */
-
-/* .swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 50px !important;
-  line-height: 1 !important; 
-} */
