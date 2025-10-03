@@ -27,16 +27,12 @@ export function Hero() {
       <button className="custom-next absolute  right-6 top-1/2 z-10 -translate-y-1/2 bg-black/20 p-2 rounded-full hover:bg-black/50 cursor-pointer duration-300 transition-transform">
         <ChevronRight className="text-primary w-6 h-6" />
       </button>
-      <div className="custom-pagination absolute bottom-2 flex gap-2" />
       <Swiper
         className="relative flex flex-col min-h-screen h-screen max-h-screen items-center justify-center px-4 py-20 overflow-hidden"
         slidesPerView={1}
         spaceBetween={50}
         loop
-        pagination={{
-          el: ".custom-pagination",
-          clickable: true,
-        }}
+        pagination={true}
         navigation={{
           prevEl: ".custom-prev",
           nextEl: ".custom-next",
