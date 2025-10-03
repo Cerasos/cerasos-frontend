@@ -6,10 +6,13 @@ import { Mail, Phone, Linkedin, Globe, Instagram } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="bg-[#002a53] px-4 py-20">
+    <section
+      id="contact"
+      className="relative bg-[#002a53] px-4 py-20 texture-container"
+    >
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 font-sans text-4xl font-bold  md:text-5xl text-primary">
+          <h2 className="mb-4 font-sans text-4xl font-bold md:text-5xl text-primary">
             Fale com a Gente
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/80">
