@@ -32,7 +32,9 @@ const ServiceCard = ({
         <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 group-hover:bg-white transition-all duration-300">
           <DynamicIcon name={icon as any} className="h-4 w-4 text-primary" />
         </div>
-        <h3 className="mb-1 text-xs font-bold text-foreground">{title}</h3>
+        <h3 className="mb-1 text-sm md:text-xs font-bold text-foreground">
+          {title}
+        </h3>
         <p className="text-[10px] leading-tight text-muted-foreground">
           {description}
         </p>

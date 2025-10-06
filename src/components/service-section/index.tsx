@@ -23,6 +23,7 @@ import {
 import { DynamicIcon } from "lucide-react/dynamic";
 import { Button } from "../ui/button";
 import { X } from "lucide-react";
+import { useIsMobile } from "@/hooks/is-mobile";
 
 const services = [
   {
@@ -186,6 +187,8 @@ const ServiceSection = () => {
   const [currentCard, setCurrentCard] = React.useState<number | null>(null);
   const [current, setCurrent] = useState(0);
 
+  const isMobile = useIsMobile();
+
   const handleCardClick = (index: number) => {
     setCurrentCard(index);
   };
@@ -201,12 +204,12 @@ const ServiceSection = () => {
   }, [api]);
 
   return (
-    <section
+    <div
       id="services"
       className="relative overflow-hidden bg-card px-4 py-4 pb-20 overflow-x-hidden"
     >
       <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="mb-12 p-10 text-center bg-[radial-gradient(ellipse_at_center,var(--background)_40%,transparent_80%)]">
+        <div className=" mb-2 md:mb-12 p-10 text-center bg-[radial-gradient(ellipse_at_center,var(--background)_40%,transparent_80%)]">
           <h2 className="mb-4 font-sans text-4xl font-bold text-card-foreground md:text-5xl">
             O que fazemos por você
           </h2>
@@ -223,7 +226,7 @@ const ServiceSection = () => {
             }).map((_, i) => (
               <CarouselItem
                 key={i}
-                className="basis-1/4 flex flex-col gap-4 select-none"
+                className="basis-1/2 md:basis-1/4 flex flex-col gap-4 select-none"
               >
                 {services.slice(i * 2, i * 2 + 2).map((service, index) => (
                   <Dialog key={`dialog-card-${i}-${index}`}>
@@ -278,7 +281,7 @@ const ServiceSection = () => {
           <CarouselNext className="z-50 absolute right-[-60] bg-gray-200/30 border-none text-primary hover:bg-primary/10 hover:text-primary" />
           <div className="absolute bottom-[-40] left-1/2 z-20 flex -translate-x-1/2 gap-2">
             {Array.from({
-              length: 8,
+              length: isMobile ? 10 : 8,
             }).map((_, index) => (
               <button
                 key={index}
@@ -294,7 +297,7 @@ const ServiceSection = () => {
           </div>
         </Carousel>
       </div>
-    </section>
+    </div>
   );
 };
 

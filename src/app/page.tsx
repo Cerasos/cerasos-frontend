@@ -6,14 +6,11 @@ import ServiceSection from "@/components/service-section";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main className="w-screen min-h-full max-w-screen overflow-x-hidden">
-        <Hero />
-        <ServiceSection />
-        <ContactSection />
-        <Footer />
-      </main>
-    </>
+    <main className="w-screen min-h-full max-w-screen overflow-x-hidden">
+      <Hero />
+      <ServiceSection />
+      <ContactSection />
+      <Footer />
+    </main>
   );
 }

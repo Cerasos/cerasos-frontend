@@ -53,8 +53,8 @@ export function Hero() {
             className="relative flex flex-col w-full h-[calc(100vh-4rem)] "
           >
             <div className=" bg-[url('/assets/bg.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px] " />
-            <div className="relative z-10 mx-auto max-w-4xl text-center h-[calc(100vh-4rem)]  flex flex-col items-center justify-center ">
-              <h1 className="mb-6 font-sans text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl text-white">
+            <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100vh-4rem)]  flex flex-col items-center justify-center ">
+              <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
                 Transformando{" "}
                 <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 ">
                   Negócios
@@ -62,7 +62,7 @@ export function Hero() {
                 Através da Inovação
               </h1>
 
-              <p className="mb-8 text-lg leading-relaxed text-white md:text-xl">
+              <p className="mb-8 text-md leading-relaxed text-white md:text-xl">
                 Impulsionamos organizações com soluções tecnológicas avançadas
                 que promovem crescimento, eficiência e sucesso sustentável na
                 era digital
@@ -74,19 +74,20 @@ export function Hero() {
             className="relative flex flex-col w-full h-[calc(100vh-4rem)] "
           >
             <div className=" bg-[url('/assets/bg-2.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px]" />
-            <div className="relative z-10 h-[calc(100vh-4rem)]  flex flex-col  ml-auto max-w-xl text-left">
-              <h1 className="mb-6 text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl text-white">
-                Transformando{" "}
+            <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100vh-4rem)]  flex flex-col items-center justify-center ">
+              <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
+                Conectando{" "}
                 <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 ">
-                  Negócios
+                  tecnologia
                 </span>{" "}
-                Através da Inovação
+                e resultados
               </h1>
 
               <p className="mb-8 text-lg leading-relaxed text-white md:text-xl ">
-                Impulsionamos organizações com soluções tecnológicas avançadas
-                que promovem crescimento, eficiência e sucesso sustentável na
-                era digital
+                Ajudamos empresas a se reinventarem com soluções digitais
+                inteligentes, otimizando processos, aumentando a produtividade e
+                garantindo um crescimento consistente em um mundo cada vez mais
+                conectado.
               </p>
             </div>
           </CarouselItem>
@@ -95,26 +96,26 @@ export function Hero() {
             className="relative flex flex-col w-full h-[calc(100vh-4rem)] "
           >
             <div className=" bg-[url('/assets/bg-4.jpg')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px]" />
-            <div className="relative z-10 mx-auto max-w-4xl text-center h-full flex flex-col items-center justify-end ">
-              <h1 className="mb-6 font-sans text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl text-white">
-                Transformando{" "}
+            <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100vh-4rem)]  flex flex-col items-center justify-center ">
+              <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
+                Inovação que{" "}
                 <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 ">
-                  Negócios
+                  transforma
                 </span>{" "}
-                Através da Inovação
+                o futuro
               </h1>
 
               <p className="mb-8 text-lg leading-relaxed text-white md:text-xl ">
-                Impulsionamos organizações com soluções tecnológicas avançadas
-                que promovem crescimento, eficiência e sucesso sustentável na
-                era digital
+                Capacitamos organizações a liderarem seu mercado por meio de
+                tecnologias inovadoras, promovendo eficiência operacional, novas
+                oportunidades de negócios e sucesso duradouro na era digital.
               </p>
             </div>
           </CarouselItem>
         </CarouselContent>
 
-        <CarouselPrevious className="z-50 absolute left-4 bg-black/10 border-none text-primary hover:bg-primary/10 hover:text-primary" />
-        <CarouselNext className="z-50 absolute right-8 bg-black/10 border-none text-primary hover:bg-primary/10 hover:text-primary" />
+        <CarouselPrevious className="hidden md:block z-50 absolute left-4 bg-black/10 border-none text-primary hover:bg-primary/10 hover:text-primary" />
+        <CarouselNext className="hidden md:block z-50 absolute right-8 bg-black/10 border-none text-primary hover:bg-primary/10 hover:text-primary" />
         <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
           {slides.map((_, index) => (
             <button

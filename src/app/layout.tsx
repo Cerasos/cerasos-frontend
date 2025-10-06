@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto } from "next/font/google";
+import Header from "@/components/header";
 
 const roboto = Roboto({
   weight: ["100", "200", "300", "400", "600", "700"], // you can choose multiple weights
@@ -20,8 +21,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={` ${roboto.className} antialiased scroll-smooth overflow-x-hidden`}
+        className={` ${roboto.className} antialiased scroll-smooth overflow-x-hidden w-screen h-screen`}
       >
+        <Header />
         {children}
       </body>
     </html>
