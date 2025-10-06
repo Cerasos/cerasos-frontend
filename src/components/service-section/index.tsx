@@ -1,7 +1,28 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import ServiceCard from "./_components/service-card";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogDescription,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { DynamicIcon } from "lucide-react/dynamic";
+import { Button } from "../ui/button";
+import { X } from "lucide-react";
 
 const services = [
   {
@@ -38,6 +59,13 @@ const services = [
     description: "Aplicações web modernas",
     details:
       "Crie aplicações web responsivas e de alto desempenho utilizando as tecnologias e frameworks mais recentes. De single-page apps a portais empresariais complexos, entregamos experiências de usuário excepcionais.",
+  },
+  {
+    icon: "cloud",
+    title: "Soluções em Nuvem",
+    description: "Infraestrutura em nuvem escalável",
+    details:
+      "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
   },
   {
     icon: "smartphone",
@@ -154,19 +182,24 @@ const services = [
 ];
 
 const ServiceSection = () => {
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
-  const [orderedServices, setOrderedServices] = useState<typeof services>([]);
-
-  const displayServices =
-    orderedServices.length > 0 ? orderedServices : services;
+  const [api, setApi] = React.useState<CarouselApi | null>();
+  const [currentCard, setCurrentCard] = React.useState<number | null>(null);
+  const [current, setCurrent] = useState(0);
 
   const handleCardClick = (index: number) => {
-    const clickedService = displayServices[index];
-    const remainingServices = displayServices.filter((_, i) => i !== index);
-    remainingServices.splice(2, 0, clickedService);
-    setOrderedServices(remainingServices);
-    setExpandedCard(2); // Always expand the first card after reordering
+    setCurrentCard(index);
   };
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
     <section
       id="services"
@@ -183,26 +216,83 @@ const ServiceSection = () => {
           </p>
         </div>
 
-        <div className="max-h-[510px] overflow-hidden">
-          <div
-            className="grid auto-rows-fr grid-cols-3 gap-3 md:grid-cols-6"
-            style={{ gridAutoFlow: "dense" }}
-          >
-            {displayServices.map((service, index) => (
-              <ServiceCard
-                index={index}
-                expandedCard={expandedCard}
-                setExpandedCard={setExpandedCard}
-                handleCardClick={handleCardClick}
-                key={`service-card-${index}`}
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                details={service.details}
+        <Carousel opts={{ align: "start" }} setApi={setApi}>
+          <CarouselContent className="ml-[-2]">
+            {Array.from({
+              length: Math.ceil(services.length / 2),
+            }).map((_, i) => (
+              <CarouselItem
+                key={i}
+                className="basis-1/4 flex flex-col gap-4 select-none"
+              >
+                {services.slice(i * 2, i * 2 + 2).map((service, index) => (
+                  <Dialog key={`dialog-card-${i}-${index}`}>
+                    <DialogContent
+                      className="py-12 gap-8"
+                      showCloseButton={false}
+                    >
+                      <DialogClose asChild>
+                        <Button
+                          type="button"
+                          className="absolute top-4 right-4 rounded-full w-10 h-10 bg-gray-200/20 hover:bg-primary/10 flex"
+                        >
+                          <X className="text-primary text-4xl w-10 h-10" />
+                        </Button>
+                      </DialogClose>
+                      <DialogHeader>
+                        <DialogTitle className="flex flex-row gap-4 items-center">
+                          <div className="mb-2 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                            <DynamicIcon
+                              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                              name={services[currentCard || 0].icon as any}
+                              className="h-8 w-8 text-primary"
+                            />
+                          </div>
+                          <div className="mb-1 text-lg font-bold text-foreground">
+                            {services[currentCard || 0].title}
+                          </div>
+                        </DialogTitle>
+                        <DialogDescription className="indent-8">
+                          {services[currentCard || 0].description}
+                        </DialogDescription>
+                      </DialogHeader>
+                      {services[currentCard || 0].details}
+                    </DialogContent>
+                    <DialogTrigger>
+                      <ServiceCard
+                        key={`service-card-${i}-${index}`}
+                        index={i * 2 + index}
+                        handleCardClick={handleCardClick}
+                        title={service.title}
+                        description={service.description}
+                        icon={service.icon}
+                        details={service.details}
+                      />
+                    </DialogTrigger>
+                  </Dialog>
+                ))}
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="z-50 absolute left-[-60] bg-gray-200/30 border-none text-primary hover:bg-primary/10 hover:text-primary" />
+          <CarouselNext className="z-50 absolute right-[-60] bg-gray-200/30 border-none text-primary hover:bg-primary/10 hover:text-primary" />
+          <div className="absolute bottom-[-40] left-1/2 z-20 flex -translate-x-1/2 gap-2">
+            {Array.from({
+              length: 8,
+            }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-2.5 w-2.5 rounded-full transition-all cursor-pointer ${
+                  current === index
+                    ? "w-8 bg-primary"
+                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
-        </div>
+        </Carousel>
       </div>
     </section>
   );
