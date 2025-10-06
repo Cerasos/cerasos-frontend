@@ -114,8 +114,8 @@ export function Hero() {
           </CarouselItem>
         </CarouselContent>
 
-        <CarouselPrevious className="hidden md:block z-50 absolute left-4 bg-black/10 border-none text-primary hover:bg-primary/10 hover:text-primary" />
-        <CarouselNext className="hidden md:block z-50 absolute right-8 bg-black/10 border-none text-primary hover:bg-primary/10 hover:text-primary" />
+        <CarouselPrevious className="hidden md:flex z-50 absolute left-4 bg-black/10 border-none text-primary hover:bg-primary/10 hover:text-primary" />
+        <CarouselNext className="hidden md:flex z-50 absolute right-8 bg-black/10 border-none text-primary hover:bg-primary/10 hover:text-primary" />
         <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
           {slides.map((_, index) => (
             <button
