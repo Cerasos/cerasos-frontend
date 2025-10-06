@@ -246,25 +246,25 @@ const ServiceSection = () => {
                       <DialogClose asChild>
                         <Button
                           type="button"
-                          className="absolute top-4 right-4 rounded-full w-10 h-10 bg-gray-200/20 hover:bg-primary/10 flex"
+                          className="absolute top-4 right-4 rounded-full w-10 h-10 bg-gray-200/20 hover:bg-gray-400/10 flex group"
                         >
-                          <X className="text-primary text-4xl w-10 h-10" />
+                          <X className="text-gray-600 text-4xl w-10 h-10 group-hover:text-gray-400" />
                         </Button>
                       </DialogClose>
                       <DialogHeader>
                         <DialogTitle className="flex flex-row gap-4 items-center">
-                          <div className="mb-2 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                          <div className="mb-2 flex h-16 w-16 items-center justify-center rounded-full bg-gray-200/30">
                             <DynamicIcon
                               // eslint-disable-next-line @typescript-eslint/no-explicit-any
                               name={services[currentCard || 0].icon as any}
-                              className="h-8 w-8 text-primary"
+                              className="h-8 w-8 gray-600"
                             />
                           </div>
                           <div className="mb-1 text-lg font-bold text-foreground">
                             {services[currentCard || 0].title}
                           </div>
                         </DialogTitle>
-                        <DialogDescription className="indent-8">
+                        <DialogDescription className="">
                           {services[currentCard || 0].description}
                         </DialogDescription>
                       </DialogHeader>
