@@ -58,63 +58,6 @@ const ContactSection = () => {
             </CardContent>
           </Card>
         </div>
-        <div className="mt-12 rounded-lg bg-white/5 backdrop-blur-sm p-8 text-center border border-white/20">
-          <h3 className="mb-4 text-2xl font-bold text-white">
-            Conecte-se com a gente
-          </h3>
-          <p className="mb-6 text-white/70">
-            Acompanhe novidades, tendências e conteúdos exclusivos nas nossas
-            redes
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="border-white/20 bg-white/5 text-white hover:bg-white/10"
-            >
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="mr-2 h-5 w-5 text-primary" />
-                LinkedIn
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="border-white/20 bg-white/5 text-white hover:bg-white/10"
-            >
-              <a
-                href="https://company.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Globe className="mr-2 h-5 w-5 text-primary" />
-                Website
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="border-white/20 bg-white/5 text-white hover:bg-white/10"
-            >
-              <a
-                href="https://company.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Instagram className="mr-2 h-5 w-5 text-primary" />
-                Instagram
-              </a>
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

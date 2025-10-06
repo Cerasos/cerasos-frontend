@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="min-h-screen overflow-x-hidden">
+      <main className="w-screen min-h-full max-w-screen overflow-x-hidden">
         <Hero />
         <ServiceSection />
         <ContactSection />

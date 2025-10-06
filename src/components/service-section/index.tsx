@@ -170,7 +170,7 @@ const ServiceSection = () => {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-card px-4 py-4 pb-20"
+      className="relative overflow-hidden bg-card px-4 py-4 pb-20 overflow-x-hidden"
     >
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-12 p-10 text-center bg-[radial-gradient(ellipse_at_center,var(--background)_40%,transparent_80%)]">
