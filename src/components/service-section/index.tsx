@@ -24,6 +24,7 @@ import { DynamicIcon } from "lucide-react/dynamic";
 import { Button } from "../ui/button";
 import { X } from "lucide-react";
 import { useIsMobile } from "@/hooks/is-mobile";
+import Autoplay from "embla-carousel-autoplay";
 
 const services = [
   {
@@ -219,7 +220,15 @@ const ServiceSection = () => {
           </p>
         </div>
 
-        <Carousel opts={{ align: "start" }} setApi={setApi}>
+        <Carousel
+          opts={{ align: "start" }}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+            }),
+          ]}
+          setApi={setApi}
+        >
           <CarouselContent className="ml-[-2]">
             {Array.from({
               length: Math.ceil(services.length / 2),
