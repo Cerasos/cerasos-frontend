@@ -1,18 +1,14 @@
 import React from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, Linkedin, Globe, Instagram } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section
-      id="contact"
-      className="relative bg-[#002a53] px-4 py-20 texture-container"
-    >
+    <section id="contact" className="relative bg-[#002a53] px-4 py-20">
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 font-sans text-4xl font-bold md:text-5xl text-primary">
+          <h2 className="mb-4 font-sans text-4xl font-bold md:text-5xl text-white">
             Fale com a Gente
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/80">

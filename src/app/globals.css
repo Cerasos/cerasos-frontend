@@ -145,20 +145,33 @@
 }
 
 .texture-container {
+  width: 100%;
+  height: 100%;
+  --color: #00457a;
   background-color: #002a53;
-  background-image: repeating-radial-gradient(
-      circle at 0 0,
-      transparent 0,
-      #00457a 15px
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
     ),
-    repeating-linear-gradient(
-      45deg,
-      rgba(0, 60, 120, 0.3) 0,
-      rgba(0, 42, 83, 0.3) 20px
-    ),
-    radial-gradient(
-      circle at top left,
-      rgba(0, 42, 83, 0.7),
-      rgba(0, 20, 50, 0.9)
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
     );
+  background-size: 55px 55px;
 }
