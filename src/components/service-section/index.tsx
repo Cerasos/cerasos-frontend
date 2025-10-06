@@ -286,8 +286,8 @@ const ServiceSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="z-50 absolute left-[-60] bg-gray-200/30 border-none text-primary hover:bg-primary/10 hover:text-primary" />
-          <CarouselNext className="z-50 absolute right-[-60] bg-gray-200/30 border-none text-primary hover:bg-primary/10 hover:text-primary" />
+          <CarouselPrevious className="z-50 absolute left-[-60] bg-gray-200/30 border-none text-gray-600 hover:bg-gray-400/10 hover:text-gray-400 disabled:text-gray-400 disabled:bg-gray-100/20" />
+          <CarouselNext className="z-50 absolute right-[-60] bg-gray-200/30 border-none text-gray-600 hover:bg-gray-400/10 hover:text-gray-400 disabled:text-gray-400 disabled:bg-gray-100/20" />
           <div className="absolute bottom-[-40] left-1/2 z-20 flex -translate-x-1/2 gap-2">
             {Array.from({
               length: isMobile ? 10 : 8,
@@ -297,7 +297,7 @@ const ServiceSection = () => {
                 onClick={() => api?.scrollTo(index)}
                 className={`h-2.5 w-2.5 rounded-full transition-all cursor-pointer ${
                   current === index
-                    ? "w-8 bg-primary"
+                    ? "w-8 bg-gray-600"
                     : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
