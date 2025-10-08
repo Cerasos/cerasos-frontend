@@ -41,11 +41,14 @@ export function Hero() {
           align: "start",
           loop: true,
         }}
-        plugins={[
-          Autoplay({
-            delay: 5000,
-          }),
-        ]}
+        plugins={
+          [
+            // Autoplay({
+            //   delay: 5000,
+            //   stopOnMouseEnter: true,
+            // }),
+          ]
+        }
       >
         <CarouselContent className="h-[calc(100vh-4rem)]  gap-0">
           <CarouselItem
