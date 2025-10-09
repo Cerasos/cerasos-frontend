@@ -28,10 +28,10 @@ const ContactSection = () => {
                 Entre em contato para dúvidas e suporte
               </p>
               <a
-                href="mailto:contact@company.com"
+                href="mailto:cerasosco@gmail.com"
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                contact@company.com
+                cerasosco@gmail.com
               </a>
             </CardContent>
           </Card>
@@ -46,10 +46,10 @@ const ContactSection = () => {
                 Converse direto com nosso time
               </p>
               <a
-                href="tel:+18005551234"
+                href="tel:11959463759"
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                +1 (800) 555-1234
+                +55 (11) 95946-3759
               </a>
             </CardContent>
           </Card>
