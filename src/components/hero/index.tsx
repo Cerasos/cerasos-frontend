@@ -21,7 +21,17 @@ export function Hero() {
   const isMobile = useIsMobile();
 
   const scrollToServices = () => {
-    document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+    const services = document.getElementById("services");
+    if (!services) return;
+
+    const headerOffset = 62; // adjust this value
+    const elementPosition = services.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   };
 
   useEffect(() => {
@@ -35,10 +45,10 @@ export function Hero() {
   }, [api]);
 
   return (
-    <section className="relative h-[calc(100vh-4rem)] w-screen overflow-x-hidden mt-16">
+    <section className="relative h-[calc(100dvh-4rem)] w-screen overflow-x-hidden mt-16">
       <Carousel
         setApi={setApi}
-        className="relative z-10 mx-auto w-full max-w-full h-[calc(100vh-4rem)] "
+        className="relative z-10 mx-auto w-full max-w-full h-[calc(100dvh-4rem)] "
         opts={{
           align: "start",
           loop: true,
@@ -51,13 +61,13 @@ export function Hero() {
           }),
         ]}
       >
-        <CarouselContent className="h-[calc(100vh-4rem)]  gap-0">
+        <CarouselContent className="h-[calc(100dvh-4rem)]  gap-0">
           <CarouselItem
             key={0}
-            className="relative flex flex-col w-full h-[calc(100vh-4rem)] "
+            className="relative flex flex-col w-full h-[calc(100dvh-4rem)] "
           >
             <div className=" bg-[url('/assets/bg.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px] " />
-            <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100vh-4rem)]  flex flex-col items-center justify-center ">
+            <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100dvh-4rem)]  flex flex-col items-center justify-center ">
               <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
                 Transformando{" "}
                 <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 ">
@@ -75,10 +85,10 @@ export function Hero() {
           </CarouselItem>
           <CarouselItem
             key={1}
-            className="relative flex flex-col w-full h-[calc(100vh-4rem)] "
+            className="relative flex flex-col w-full h-[calc(100dvh-4rem)] "
           >
             <div className=" bg-[url('/assets/bg-2.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px]" />
-            <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100vh-4rem)]  flex flex-col items-center justify-center ">
+            <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100dvh-4rem)]  flex flex-col items-center justify-center ">
               <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
                 Conectando{" "}
                 <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 ">
@@ -97,10 +107,10 @@ export function Hero() {
           </CarouselItem>
           <CarouselItem
             key={2}
-            className="relative flex flex-col w-full h-[calc(100vh-4rem)] "
+            className="relative flex flex-col w-full h-[calc(100dvh-4rem)] "
           >
             <div className=" bg-[url('/assets/bg-4.jpg')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px]" />
-            <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100vh-4rem)]  flex flex-col items-center justify-center ">
+            <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100dvh-4rem)]  flex flex-col items-center justify-center ">
               <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
                 Inovação que{" "}
                 <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 ">
