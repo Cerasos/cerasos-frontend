@@ -11,12 +11,14 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import React, { useEffect, useState } from "react";
+import { useIsMobile } from "@/hooks/is-mobile";
 
 const slides = [{ index: 0 }, { index: 1 }, { index: 2 }];
 
 export function Hero() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const isMobile = useIsMobile();
 
   const scrollToServices = () => {
     document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
@@ -41,14 +43,13 @@ export function Hero() {
           align: "start",
           loop: true,
         }}
-        plugins={
-          [
-            // Autoplay({
-            //   delay: 5000,
-            //   stopOnMouseEnter: true,
-            // }),
-          ]
-        }
+        plugins={[
+          Autoplay({
+            delay: 7000,
+            stopOnMouseEnter: true,
+            stopOnFocusIn: isMobile ? true : false,
+          }),
+        ]}
       >
         <CarouselContent className="h-[calc(100vh-4rem)]  gap-0">
           <CarouselItem
