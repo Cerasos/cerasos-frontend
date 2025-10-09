@@ -37,9 +37,9 @@ const Header = () => {
         </button>
         <a
           href="tel:11959463759"
-          className="flex flex-row items-center justify-center gap-2 text-sm font-medium text-black transition-colors hover:text-foreground cursor-pointer"
+          className="flex flex-row items-center justify-center gap-0 text-sm font-medium text-black transition-colors hover:text-foreground cursor-pointer"
         >
-          <Image src={WppIcon} alt="WhatsApp Icon" width={24} height={24} />
+          <Image src={WppIcon} alt="WhatsApp Icon" width={28} height={28} />
           Contato
         </a>
       </nav>
