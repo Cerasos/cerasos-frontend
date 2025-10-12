@@ -48,7 +48,9 @@ const ContactSection = () => {
                 Converse direto com nosso time
               </p>
               <a
-                href="tel:11959463759"
+                href="https://wa.me/5511959463759"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors"
               >
                 +55 (11) 95946-3759
