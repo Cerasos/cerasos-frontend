@@ -5,7 +5,10 @@ import { Mail, Phone } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="relative bg-[#002a53] px-4 py-20">
+    <section
+      id="contact"
+      className="relative bg-[#002a53] px-4 py-10 max-h-[100dvh]"
+    >
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 font-sans text-4xl font-bold md:text-5xl text-white">
@@ -18,8 +21,8 @@ const ContactSection = () => {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="border-white/20 bg-white/5 backdrop-blur-sm">
-            <CardContent className="p-6">
+          <Card className="border-white/20 bg-white/5 backdrop-blur-sm  max-h-[200px] md:max-h-[250px] py-4">
+            <CardContent className="md:p-6 flex flex-col justify-between">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
@@ -35,9 +38,8 @@ const ContactSection = () => {
               </a>
             </CardContent>
           </Card>
-
-          <Card className="border-white/20 bg-white/5 backdrop-blur-sm">
-            <CardContent className="p-6">
+          <Card className="border-white/20 bg-white/5 backdrop-blur-sm  max-h-[200px] md:max-h-[250px] py-4">
+            <CardContent className="md:p-6 flex flex-col justify-between">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Phone className="h-6 w-6 text-primary " />
               </div>

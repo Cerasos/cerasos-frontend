@@ -21,17 +21,17 @@ const Header = () => {
     });
   };
   return (
-    <header className="fixed min-h-16 w-screen top-0 left-0 px-4 md:px-10 z-50 bg-gray-100 border-b border-gray-400 shadow-lg flex items-center justify-center md:justify-between">
+    <header className="fixed min-h-16 w-screen top-0 left-0 px-8 md:px-10 z-50 bg-gray-100 border-b border-gray-400 shadow-lg flex items-center justify-between">
       <div className="flex flex-col items-center gap-2">
         <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-lg bg-transparent">
           <Image src={LogoFull} alt="Cerasos Logo" />
         </div>
       </div>
 
-      <nav className="hidden items-center gap-6 md:flex">
+      <nav className=" items-center gap-6 md:flex">
         <button
           onClick={scrollToServices}
-          className="text-sm font-medium text-black transition-colors hover:text-foreground cursor-pointer"
+          className="hidden md:block text-sm font-medium text-black transition-colors hover:text-foreground cursor-pointer"
         >
           Serviços
         </button>
@@ -40,7 +40,7 @@ const Header = () => {
           className="flex flex-row items-center justify-center gap-0 text-sm font-medium text-black transition-colors hover:text-foreground cursor-pointer"
         >
           <Image src={WppIcon} alt="WhatsApp Icon" width={28} height={28} />
-          Contato
+          <span className="hidden md:block">Contato</span>
         </a>
       </nav>
     </header>
