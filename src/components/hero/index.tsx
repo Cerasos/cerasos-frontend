@@ -71,15 +71,18 @@ export function Hero() {
               <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
                 Transformando{" "}
                 <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 ">
-                  Negócios
+                  negócios
                 </span>{" "}
-                Através da Inovação
+                através da tecnologia
               </h1>
 
               <p className="mb-8 text-md leading-relaxed text-white md:text-xl">
-                Impulsionamos organizações com soluções tecnológicas avançadas
-                que promovem crescimento, eficiência e sucesso sustentável na
-                era digital
+                Somos responsáveis por trazer soluções tecnológicas para
+                qualquer
+                <br /> tipo de organização ou negócio.
+                <br />
+                Estamos na era digital, onde tudo pode ser resolvido com
+                inovação e tecnologia
               </p>
             </div>
           </CarouselItem>
