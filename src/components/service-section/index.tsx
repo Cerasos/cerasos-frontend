@@ -27,15 +27,14 @@ import { useIsMobile } from "@/hooks/is-mobile";
 import Autoplay from "embla-carousel-autoplay";
 
 const services = [
-  {
-    icon: "database",
-    title: "Modelagem de Banco de Dados",
-    description: "Armazenamento de dados otimizado",
-    details:
-      "Desenhamos esquemas de banco de dados eficientes e otimizamos a performance de consultas para SQL e NoSQL. Garantimos que sua camada de dados seja escalável, segura e de alta performance.",
-  },
-
   // ------------------ NOVOS SERVIÇOS ------------------
+  {
+    icon: "file-text",
+    title: "Emissão Automática de Comprovantes",
+    description: "Envios automáticos e personalizados",
+    details:
+      "Gere e envie comprovantes automaticamente via WhatsApp ou e-mail após cada venda ou pagamento. Reduza tarefas manuais e ofereça uma experiência mais ágil e profissional aos seus clientes.",
+  },
 
   {
     icon: "message-square",
@@ -87,12 +86,13 @@ const services = [
       "Desenvolvemos sistemas personalizados conforme as necessidades do seu negócio. Desde integrações até novas funcionalidades, criamos tecnologia que se adapta à sua realidade.",
   },
   {
-    icon: "file-text",
-    title: "Emissão Automática de Comprovantes",
-    description: "Envios automáticos e personalizados",
+    icon: "database",
+    title: "Modelagem de Banco de Dados",
+    description: "Armazenamento de dados otimizado",
     details:
-      "Gere e envie comprovantes automaticamente via WhatsApp ou e-mail após cada venda ou pagamento. Reduza tarefas manuais e ofereça uma experiência mais ágil e profissional aos seus clientes.",
+      "Desenhamos esquemas de banco de dados eficientes e otimizamos a performance de consultas para SQL e NoSQL. Garantimos que sua camada de dados seja escalável, segura e de alta performance.",
   },
+
   {
     icon: "calendar",
     title: "Agendamento de Serviços Online",
