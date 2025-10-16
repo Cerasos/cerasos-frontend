@@ -248,8 +248,8 @@ const ServiceSection = () => {
       className="relative overflow-hidden bg-card px-4 py-4 pb-20 overflow-x-hidden max-h-[100dvh - 4rem]"
     >
       <div className="relative z-10 mx-auto max-w-7xl">
-        <div className=" mb-2 md:mb-12 p-10 text-center bg-[radial-gradient(ellipse_at_center,var(--background)_40%,transparent_80%)]">
-          <h2 className="mb-4 font-sans text-4xl font-bold text-card-foreground md:text-5xl">
+        <div className=" mb-2 md:mb-4 p-10 text-center bg-[radial-gradient(ellipse_at_center,var(--background)_40%,transparent_80%)]">
+          <h2 className=" font-sans text-4xl font-bold text-card-foreground md:text-5xl">
             O que fazemos por você
           </h2>
           {/* <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">
