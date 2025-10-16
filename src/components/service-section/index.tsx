@@ -164,18 +164,11 @@ const services = [
       "Desenvolvemos aplicativos nativos e multiplataforma que engajam usuários e impulsionam o crescimento do seu negócio. Nossas soluções mobile são otimizadas para performance, usabilidade e integração perfeita com seus sistemas.",
   },
   {
-    icon: "users",
-    title: "Consultoria",
-    description: "Orientação e suporte especializado",
+    icon: "file-text",
+    title: "Envio Automático de Notas Fiscais",
+    description: "Burocracia resolvida com tecnologia",
     details:
-      "Aproveite nossa experiência com consultoria estratégica em tecnologia. Ajudamos sua empresa na transformação digital, otimização de processos e implementação de melhores práticas para atingir objetivos de negócio.",
-  },
-  {
-    icon: "cloud",
-    title: "Soluções em Nuvem",
-    description: "Infraestrutura em nuvem escalável",
-    details:
-      "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
+      "Automatize a emissão e o envio de notas fiscais diretamente do seu sistema. Integração com plataformas municipais e estaduais, garantindo conformidade, agilidade e redução de erros operacionais.",
   },
   {
     icon: "database",
@@ -206,18 +199,18 @@ const services = [
       "Elimine tarefas manuais e otimize operações com automação inteligente. De RPA a orquestração de workflows, ajudamos sua empresa a fazer mais com menos.",
   },
   {
-    icon: "server",
-    title: "Infraestrutura",
-    description: "Soluções robustas de servidores",
-    details:
-      "Projetamos e gerenciamos infraestruturas confiáveis que crescem junto com o seu negócio. Oferecemos soluções on-premise, em nuvem e híbridas, com alta disponibilidade e recuperação de desastres.",
-  },
-  {
     icon: "code",
     title: "Desenvolvimento de APIs",
     description: "Serviços RESTful",
     details:
       "Criamos APIs robustas e escaláveis que alimentam suas aplicações e permitem integrações de terceiros. Projetamos APIs RESTful e GraphQL com documentação completa e segurança reforçada.",
+  },
+  {
+    icon: "users",
+    title: "Consultoria",
+    description: "Orientação e suporte especializado",
+    details:
+      "Aproveite nossa experiência com consultoria estratégica em tecnologia. Ajudamos sua empresa na transformação digital, otimização de processos e implementação de melhores práticas para atingir objetivos de negócio.",
   },
 ];
 
