@@ -101,7 +101,7 @@ export function Hero() {
 
               <p className="mb-8 text-lg leading-relaxed text-white md:text-xl ">
                 Nossa missão é impulsionar o crescimento de empresas com
-                soluções que unem criatividade, automação e tecnologia de ponta.
+                soluções que unem criatividade, automação e tecnologia.
                 Transformamos ideias em ferramentas reais que facilitam o dia a
                 dia e elevam o potencial do seu negócio.
               </p>
