@@ -93,18 +93,17 @@ export function Hero() {
             <div className=" bg-[url('/assets/bg-2.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px]" />
             <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100dvh-4rem)]  flex flex-col items-center justify-center ">
               <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
-                Conectando{" "}
+                Inovação que{" "}
                 <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 ">
-                  tecnologia
-                </span>{" "}
-                e resultados
+                  transforma
+                </span>
               </h1>
 
               <p className="mb-8 text-lg leading-relaxed text-white md:text-xl ">
-                Ajudamos empresas a se reinventarem com soluções digitais
-                inteligentes, otimizando processos, aumentando a produtividade e
-                garantindo um crescimento consistente em um mundo cada vez mais
-                conectado.
+                Nossa missão é impulsionar o crescimento de empresas com
+                soluções que unem criatividade, automação e tecnologia de ponta.
+                Transformamos ideias em ferramentas reais que facilitam o dia a
+                dia e elevam o potencial do seu negócio.
               </p>
             </div>
           </CarouselItem>
@@ -115,17 +114,16 @@ export function Hero() {
             <div className=" bg-[url('/assets/bg-4.jpg')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px]" />
             <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100dvh-4rem)]  flex flex-col items-center justify-center ">
               <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
-                Inovação que{" "}
+                Soluções que{" "}
                 <span className="bg-[#5ff4ff] bg-clip-text text-transparent saturate-200 ">
-                  transforma
+                  impulsionam
                 </span>{" "}
-                o futuro
+                resultados
               </h1>
 
               <p className="mb-8 text-lg leading-relaxed text-white md:text-xl ">
-                Capacitamos organizações a liderarem seu mercado por meio de
-                tecnologias inovadoras, promovendo eficiência operacional, novas
-                oportunidades de negócios e sucesso duradouro na era digital.
+                Aplicamos tecnologia de forma estratégica para simplificar
+                rotinas e potencializar o desempenho da sua empresa.
               </p>
             </div>
           </CarouselItem>

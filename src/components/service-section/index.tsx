@@ -28,32 +28,11 @@ import Autoplay from "embla-carousel-autoplay";
 
 const services = [
   {
-    icon: "cloud",
-    title: "Soluções em Nuvem",
-    description: "Infraestrutura em nuvem escalável",
-    details:
-      "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
-  },
-  {
     icon: "zap",
     title: "Integração de IA",
     description: "Soluções de automação inteligente",
     details:
       "Aproveite o poder da inteligência artificial e machine learning para automatizar processos, obter insights e aprimorar a tomada de decisões. De processamento de linguagem natural à visão computacional, integramos IA de forma fluida nos seus fluxos de trabalho.",
-  },
-  {
-    icon: "database",
-    title: "Análise de Dados",
-    description: "Insights que impulsionam decisões",
-    details:
-      "Transforme dados brutos em insights acionáveis com análises avançadas, visualizações e relatórios. Nossa equipe de ciência de dados ajuda a identificar tendências, prever resultados e tomar decisões baseadas em dados.",
-  },
-  {
-    icon: "lock",
-    title: "Cibersegurança",
-    description: "Proteção de nível empresarial",
-    details:
-      "Proteja seus ativos digitais com soluções completas de segurança, incluindo testes de penetração, avaliações de vulnerabilidades, auditorias e monitoramento 24/7 para prevenir e responder a ameaças.",
   },
   {
     icon: "code",
@@ -62,26 +41,13 @@ const services = [
     details:
       "Crie aplicações web responsivas e de alto desempenho utilizando as tecnologias e frameworks mais recentes. De single-page apps a portais empresariais complexos, entregamos experiências de usuário excepcionais.",
   },
-  {
-    icon: "cloud",
-    title: "Soluções em Nuvem",
-    description: "Infraestrutura em nuvem escalável",
-    details:
-      "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
-  },
+
   {
     icon: "smartphone",
     title: "Aplicativos Mobile",
     description: "Soluções iOS e Android",
     details:
       "Desenvolvemos aplicativos nativos e multiplataforma que engajam usuários e impulsionam o crescimento do seu negócio. Nossas soluções mobile são otimizadas para performance, usabilidade e integração perfeita com seus sistemas.",
-  },
-  {
-    icon: "bar-chart",
-    title: "Business Intelligence",
-    description: "Estratégias baseadas em dados",
-    details:
-      "Implemente soluções de BI poderosas que fornecem visibilidade em tempo real das operações. Criamos dashboards personalizados, relatórios e análises que capacitam sua equipe a tomar decisões informadas.",
   },
   {
     icon: "users",
@@ -112,26 +78,13 @@ const services = [
       "Transforme dados brutos em insights acionáveis com análises avançadas, visualizações e relatórios. Nossa equipe de ciência de dados ajuda a identificar tendências, prever resultados e tomar decisões baseadas em dados.",
   },
   {
-    icon: "cpu",
-    title: "DevOps",
-    description: "Implantações ágeis e seguras",
-    details:
-      "Acelere seu ciclo de desenvolvimento com práticas modernas de DevOps. Implementamos pipelines de CI/CD, infraestrutura como código e testes automatizados para entregas mais rápidas e confiáveis.",
-  },
-  {
     icon: "globe",
     title: "Transformação Digital",
     description: "Modernize sua empresa",
     details:
       "Guiamos sua organização em estratégias de transformação digital que modernizam operações, melhoram a experiência do cliente e criam novas fontes de receita por meio da tecnologia.",
   },
-  {
-    icon: "shield",
-    title: "Conformidade",
-    description: "Adesão regulatória",
-    details:
-      "Garanta que seus sistemas atendam aos padrões da indústria e regulamentações como GDPR, HIPAA e SOC 2. Fornecemos auditorias de conformidade, documentação e monitoramento contínuo.",
-  },
+
   {
     icon: "layers",
     title: "Integração de Sistemas",
@@ -159,13 +112,6 @@ const services = [
     description: "Gestão de código",
     details:
       "Implemente boas práticas de versionamento com workflows Git, estratégias de branching e ferramentas de colaboração que mantêm sua equipe de desenvolvimento produtiva e organizada.",
-  },
-  {
-    icon: "package",
-    title: "Deploy",
-    description: "Entrega contínua",
-    details:
-      "Implemente pipelines de deploy automatizados para entregas mais rápidas e seguras. Adotamos blue-green deployments, canary releases e estratégias de rollback para atualizações sem downtime.",
   },
   {
     icon: "code",
