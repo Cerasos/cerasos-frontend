@@ -28,76 +28,6 @@ import Autoplay from "embla-carousel-autoplay";
 
 const services = [
   {
-    icon: "code",
-    title: "Desenvolvimento Web",
-    description: "Aplicações web modernas",
-    details:
-      "Crie aplicações web responsivas e de alto desempenho utilizando as tecnologias e frameworks mais recentes. De single-page apps a portais empresariais complexos, entregamos experiências de usuário excepcionais.",
-  },
-  {
-    icon: "smartphone",
-    title: "Aplicativos Mobile",
-    description: "Soluções iOS e Android",
-    details:
-      "Desenvolvemos aplicativos nativos e multiplataforma que engajam usuários e impulsionam o crescimento do seu negócio. Nossas soluções mobile são otimizadas para performance, usabilidade e integração perfeita com seus sistemas.",
-  },
-  {
-    icon: "users",
-    title: "Consultoria",
-    description: "Orientação e suporte especializado",
-    details:
-      "Aproveite nossa experiência com consultoria estratégica em tecnologia. Ajudamos sua empresa na transformação digital, otimização de processos e implementação de melhores práticas para atingir objetivos de negócio.",
-  },
-  {
-    icon: "cloud",
-    title: "Soluções em Nuvem",
-    description: "Infraestrutura em nuvem escalável",
-    details:
-      "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
-  },
-  {
-    icon: "database",
-    title: "Análise de Dados",
-    description: "Insights que impulsionam decisões",
-    details:
-      "Transforme dados brutos em insights acionáveis com análises avançadas, visualizações e relatórios. Nossa equipe de ciência de dados ajuda a identificar tendências, prever resultados e tomar decisões baseadas em dados.",
-  },
-  {
-    icon: "globe",
-    title: "Transformação Digital",
-    description: "Modernize sua empresa",
-    details:
-      "Guiamos sua organização em estratégias de transformação digital que modernizam operações, melhoram a experiência do cliente e criam novas fontes de receita por meio da tecnologia.",
-  },
-  {
-    icon: "layers",
-    title: "Integração de Sistemas",
-    description: "Conectividade sem falhas",
-    details:
-      "Conecte sistemas e aplicações diferentes para criar um ecossistema tecnológico unificado. Nossas soluções garantem fluxo de dados eficiente e automação de processos em toda a infraestrutura.",
-  },
-  {
-    icon: "workflow",
-    title: "Automação de Processos",
-    description: "Fluxos de trabalho eficientes",
-    details:
-      "Elimine tarefas manuais e otimize operações com automação inteligente. De RPA a orquestração de workflows, ajudamos sua empresa a fazer mais com menos.",
-  },
-  {
-    icon: "server",
-    title: "Infraestrutura",
-    description: "Soluções robustas de servidores",
-    details:
-      "Projetamos e gerenciamos infraestruturas confiáveis que crescem junto com o seu negócio. Oferecemos soluções on-premise, em nuvem e híbridas, com alta disponibilidade e recuperação de desastres.",
-  },
-  {
-    icon: "code",
-    title: "Desenvolvimento de APIs",
-    description: "Serviços RESTful",
-    details:
-      "Criamos APIs robustas e escaláveis que alimentam suas aplicações e permitem integrações de terceiros. Projetamos APIs RESTful e GraphQL com documentação completa e segurança reforçada.",
-  },
-  {
     icon: "database",
     title: "Modelagem de Banco de Dados",
     description: "Armazenamento de dados otimizado",
@@ -218,6 +148,76 @@ const services = [
     description: "Venda de forma moderna e automatizada",
     details:
       "Exiba seus produtos de maneira dinâmica e atrativa com filtros, busca inteligente e integração direta ao carrinho de compras ou WhatsApp.",
+  },
+  {
+    icon: "code",
+    title: "Desenvolvimento Web",
+    description: "Aplicações web modernas",
+    details:
+      "Crie aplicações web responsivas e de alto desempenho utilizando as tecnologias e frameworks mais recentes. De single-page apps a portais empresariais complexos, entregamos experiências de usuário excepcionais.",
+  },
+  {
+    icon: "smartphone",
+    title: "Aplicativos Mobile",
+    description: "Soluções iOS e Android",
+    details:
+      "Desenvolvemos aplicativos nativos e multiplataforma que engajam usuários e impulsionam o crescimento do seu negócio. Nossas soluções mobile são otimizadas para performance, usabilidade e integração perfeita com seus sistemas.",
+  },
+  {
+    icon: "users",
+    title: "Consultoria",
+    description: "Orientação e suporte especializado",
+    details:
+      "Aproveite nossa experiência com consultoria estratégica em tecnologia. Ajudamos sua empresa na transformação digital, otimização de processos e implementação de melhores práticas para atingir objetivos de negócio.",
+  },
+  {
+    icon: "cloud",
+    title: "Soluções em Nuvem",
+    description: "Infraestrutura em nuvem escalável",
+    details:
+      "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
+  },
+  {
+    icon: "database",
+    title: "Análise de Dados",
+    description: "Insights que impulsionam decisões",
+    details:
+      "Transforme dados brutos em insights acionáveis com análises avançadas, visualizações e relatórios. Nossa equipe de ciência de dados ajuda a identificar tendências, prever resultados e tomar decisões baseadas em dados.",
+  },
+  {
+    icon: "globe",
+    title: "Transformação Digital",
+    description: "Modernize sua empresa",
+    details:
+      "Guiamos sua organização em estratégias de transformação digital que modernizam operações, melhoram a experiência do cliente e criam novas fontes de receita por meio da tecnologia.",
+  },
+  {
+    icon: "layers",
+    title: "Integração de Sistemas",
+    description: "Conectividade sem falhas",
+    details:
+      "Conecte sistemas e aplicações diferentes para criar um ecossistema tecnológico unificado. Nossas soluções garantem fluxo de dados eficiente e automação de processos em toda a infraestrutura.",
+  },
+  {
+    icon: "workflow",
+    title: "Automação de Processos",
+    description: "Fluxos de trabalho eficientes",
+    details:
+      "Elimine tarefas manuais e otimize operações com automação inteligente. De RPA a orquestração de workflows, ajudamos sua empresa a fazer mais com menos.",
+  },
+  {
+    icon: "server",
+    title: "Infraestrutura",
+    description: "Soluções robustas de servidores",
+    details:
+      "Projetamos e gerenciamos infraestruturas confiáveis que crescem junto com o seu negócio. Oferecemos soluções on-premise, em nuvem e híbridas, com alta disponibilidade e recuperação de desastres.",
+  },
+  {
+    icon: "code",
+    title: "Desenvolvimento de APIs",
+    description: "Serviços RESTful",
+    details:
+      "Criamos APIs robustas e escaláveis que alimentam suas aplicações e permitem integrações de terceiros. Projetamos APIs RESTful e GraphQL com documentação completa e segurança reforçada.",
   },
 ];
 
