@@ -25,10 +25,12 @@ const ServiceCard = ({
   return (
     <Card
       onPointerDown={(e) => e.stopPropagation()}
-      className={` md:min-h-[160px] min-h-[180px]   border-border col-span-1 bg-background group hover:bg-gray-400/10 transition-all duration-300 cursor-pointer`}
+      className={` md:min-h-[220px] min-h-[180px]  border-border col-span-1 bg-background group hover:bg-gray-400/10 transition-all duration-300 cursor-pointer`}
       onClick={() => handleCardClick(index)}
     >
-      <CardContent className={`flex flex-col items-center text-center p-2`}>
+      <CardContent
+        className={`flex flex-col items-center  min-h-full text-center p-2`}
+      >
         <div className="mb-2 flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-gray-400/10 group-hover:bg-white transition-all duration-300">
           <DynamicIcon
             name={icon as any}
