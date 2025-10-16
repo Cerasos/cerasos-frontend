@@ -28,13 +28,6 @@ import Autoplay from "embla-carousel-autoplay";
 
 const services = [
   {
-    icon: "zap",
-    title: "Integração de IA",
-    description: "Soluções de automação inteligente",
-    details:
-      "Aproveite o poder da inteligência artificial e machine learning para automatizar processos, obter insights e aprimorar a tomada de decisões. De processamento de linguagem natural à visão computacional, integramos IA de forma fluida nos seus fluxos de trabalho.",
-  },
-  {
     icon: "code",
     title: "Desenvolvimento Web",
     description: "Aplicações web modernas",
@@ -63,13 +56,7 @@ const services = [
     details:
       "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
   },
-  {
-    icon: "zap",
-    title: "Integração de IA",
-    description: "Soluções de automação inteligente",
-    details:
-      "Aproveite o poder da inteligência artificial e machine learning para automatizar processos, obter insights e aprimorar a tomada de decisões. De processamento de linguagem natural à visão computacional, integramos IA de forma fluida nos seus fluxos de trabalho.",
-  },
+
   {
     icon: "database",
     title: "Análise de Dados",
