@@ -34,7 +34,6 @@ const services = [
     details:
       "Crie aplicações web responsivas e de alto desempenho utilizando as tecnologias e frameworks mais recentes. De single-page apps a portais empresariais complexos, entregamos experiências de usuário excepcionais.",
   },
-
   {
     icon: "smartphone",
     title: "Aplicativos Mobile",
@@ -56,7 +55,6 @@ const services = [
     details:
       "Construa e implante aplicações escaláveis na AWS, Azure e Google Cloud. Fornecemos serviços de migração, otimização e gerenciamento completos para garantir que sua infraestrutura seja confiável, segura e econômica.",
   },
-
   {
     icon: "database",
     title: "Análise de Dados",
@@ -71,7 +69,6 @@ const services = [
     details:
       "Guiamos sua organização em estratégias de transformação digital que modernizam operações, melhoram a experiência do cliente e criam novas fontes de receita por meio da tecnologia.",
   },
-
   {
     icon: "layers",
     title: "Integração de Sistemas",
@@ -94,13 +91,6 @@ const services = [
       "Projetamos e gerenciamos infraestruturas confiáveis que crescem junto com o seu negócio. Oferecemos soluções on-premise, em nuvem e híbridas, com alta disponibilidade e recuperação de desastres.",
   },
   {
-    icon: "git-branch",
-    title: "Controle de Versão",
-    description: "Gestão de código",
-    details:
-      "Implemente boas práticas de versionamento com workflows Git, estratégias de branching e ferramentas de colaboração que mantêm sua equipe de desenvolvimento produtiva e organizada.",
-  },
-  {
     icon: "code",
     title: "Desenvolvimento de APIs",
     description: "Serviços RESTful",
@@ -113,6 +103,121 @@ const services = [
     description: "Armazenamento de dados otimizado",
     details:
       "Desenhamos esquemas de banco de dados eficientes e otimizamos a performance de consultas para SQL e NoSQL. Garantimos que sua camada de dados seja escalável, segura e de alta performance.",
+  },
+
+  // ------------------ NOVOS SERVIÇOS ------------------
+
+  {
+    icon: "message-square",
+    title: "Chatbot e Atendimento Automático",
+    description: "Atendimento inteligente 24h",
+    details:
+      "Automatize o atendimento da sua empresa com chatbots personalizados que respondem de forma natural e eficiente. Ofereça suporte instantâneo aos clientes, reduza filas de espera e aumente a produtividade do seu time.",
+  },
+  {
+    icon: "shopping-cart",
+    title: "Sistema de Pedidos Automático",
+    description: "Pedidos rápidos e integrados",
+    details:
+      "Simplifique a gestão de pedidos com um sistema automatizado que conecta seu atendimento, estoque e pagamentos. Ideal para comércios e restaurantes que buscam agilidade e redução de erros operacionais.",
+  },
+  {
+    icon: "utensils",
+    title: "Cardápio Digital e Automático",
+    description: "Gestão prática de produtos",
+    details:
+      "Substitua cardápios físicos por uma versão digital dinâmica e totalmente gerenciável. Atualize preços e itens em tempo real e ofereça uma experiência moderna e interativa aos seus clientes.",
+  },
+  {
+    icon: "share-2",
+    title: "Integração com WhatsApp e Redes Sociais",
+    description: "Automatize suas conversas",
+    details:
+      "Centralize suas comunicações com integração direta ao WhatsApp, Instagram e outras plataformas. Gerencie atendimentos, envios automáticos e campanhas em um só lugar.",
+  },
+  {
+    icon: "credit-card",
+    title: "Link de Pagamento Automático",
+    description: "Cobranças simples e seguras",
+    details:
+      "Gere e envie links de pagamento automáticos em segundos. Facilite o processo de venda, reduza inadimplência e ofereça mais praticidade para seus clientes.",
+  },
+  {
+    icon: "bar-chart-3",
+    title: "Painel de Estatísticas e Relatórios",
+    description: "Acompanhe seus resultados",
+    details:
+      "Tenha acesso a métricas detalhadas sobre vendas, atendimentos e desempenho geral. Nossos painéis ajudam você a tomar decisões baseadas em dados e otimizar estratégias de crescimento.",
+  },
+  {
+    icon: "wrench",
+    title: "Customização de Sistemas",
+    description: "Soluções sob medida",
+    details:
+      "Desenvolvemos sistemas personalizados conforme as necessidades do seu negócio. Desde integrações até novas funcionalidades, criamos tecnologia que se adapta à sua realidade.",
+  },
+  {
+    icon: "file-text",
+    title: "Emissão Automática de Comprovantes",
+    description: "Envios automáticos e personalizados",
+    details:
+      "Gere e envie comprovantes automaticamente via WhatsApp ou e-mail após cada venda ou pagamento. Reduza tarefas manuais e ofereça uma experiência mais ágil e profissional aos seus clientes.",
+  },
+  {
+    icon: "calendar",
+    title: "Agendamento de Serviços Online",
+    description: "Gestão prática e automatizada",
+    details:
+      "Permita que seus clientes agendem horários e serviços de forma automática, com integração direta ao WhatsApp e notificações em tempo real. Ideal para clínicas, salões e prestadores de serviço.",
+  },
+  {
+    icon: "wallet",
+    title: "Integração com Sistemas de Pagamento",
+    description: "Conecte vendas e automação financeira",
+    details:
+      "Integramos sua plataforma com gateways como Pix, PagSeguro, Mercado Pago e outros. Otimize seu processo de cobrança e simplifique o fluxo financeiro da sua empresa.",
+  },
+  {
+    icon: "calculator",
+    title: "Sistema de Orçamentos Automático",
+    description: "Cotações rápidas e inteligentes",
+    details:
+      "Crie um sistema que gera orçamentos automáticos com base nas preferências do cliente. Agilidade no atendimento e aumento nas taxas de conversão.",
+  },
+  {
+    icon: "package",
+    title: "Gestão de Produtos e Estoque",
+    description: "Controle total em tempo real",
+    details:
+      "Monitore entradas, saídas e disponibilidade de produtos com um painel moderno e integrado. Receba alertas automáticos e mantenha o estoque sempre atualizado.",
+  },
+  {
+    icon: "layout-dashboard",
+    title: "Painel de Administração Personalizado",
+    description: "Controle completo da sua operação",
+    details:
+      "Tenha um painel administrativo visual e intuitivo para gerenciar clientes, pedidos, pagamentos e métricas. Desenvolvido sob medida para o seu modelo de negócio.",
+  },
+  {
+    icon: "bell",
+    title: "Notificações e Lembretes Automáticos",
+    description: "Comunicação eficiente e imediata",
+    details:
+      "Automatize lembretes de agendamento, pagamentos e entregas via WhatsApp, SMS ou e-mail. Reduza faltas e melhore a experiência do cliente.",
+  },
+  {
+    icon: "gift",
+    title: "Sistema de Fidelidade Digital",
+    description: "Recompense clientes automaticamente",
+    details:
+      "Crie programas de pontos e recompensas digitais integrados ao seu sistema de atendimento. Aumente a retenção e o engajamento dos seus clientes com praticidade.",
+  },
+  {
+    icon: "book-open",
+    title: "Catálogo Digital Interativo",
+    description: "Venda de forma moderna e automatizada",
+    details:
+      "Exiba seus produtos de maneira dinâmica e atrativa com filtros, busca inteligente e integração direta ao carrinho de compras ou WhatsApp.",
   },
 ];
 
