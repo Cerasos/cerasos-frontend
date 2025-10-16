@@ -25,7 +25,7 @@ const ServiceCard = ({
   return (
     <Card
       onPointerDown={(e) => e.stopPropagation()}
-      className={` md:min-h-[220px] min-h-[180px]  border-border col-span-1 bg-background group hover:bg-gray-400/10 transition-all duration-300 cursor-pointer`}
+      className={` md:min-h-[200px] min-h-[180px]  border-border col-span-1 bg-background group hover:bg-gray-400/10 transition-all duration-300 cursor-pointer`}
       onClick={() => handleCardClick(index)}
     >
       <CardContent
