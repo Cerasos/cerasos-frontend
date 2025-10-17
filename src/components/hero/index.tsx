@@ -90,7 +90,7 @@ export function Hero() {
             key={1}
             className="relative flex flex-col w-full h-[calc(100dvh-4rem)] "
           >
-            <div className=" bg-[url('/assets/bg-2.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-bottom blur-[2px]" />
+            <div className=" bg-[url('/assets/bg-2.png')] bg-radial from-background to-muted absolute inset-0 max-w-screen bg-cover bg-right md:bg-bottom blur-[2px]" />
             <div className="relative z-10 mx-auto w-full md:w-4xl text-center h-[calc(100dvh-4rem)]  flex flex-col items-center justify-center ">
               <h1 className="mb-6 font-sans text-4xl font-bold leading-tight text-balance md:text-5xl lg:text-6xl text-white">
                 Inovação que{" "}
