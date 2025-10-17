@@ -317,7 +317,7 @@ const ServiceSection = () => {
           <CarouselNext className="z-50 absolute right-[-60] bg-gray-200/30 border-none text-gray-600 hover:bg-gray-400/10 hover:text-gray-400 disabled:text-gray-400 disabled:bg-gray-100/20" />
           <div className="absolute bottom-[-40] left-1/2 z-20 flex -translate-x-1/2 gap-2">
             {Array.from({
-              length: isMobile ? 13 : 11,
+              length: isMobile ? 12 : 10,
             }).map((_, index) => (
               <button
                 key={index}
