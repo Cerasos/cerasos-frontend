@@ -245,10 +245,6 @@ const ServiceSection = () => {
           <h2 className=" font-sans text-4xl font-bold text-card-foreground md:text-5xl">
             O que fazemos por você
           </h2>
-          {/* <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Do desenvolvimento ao crescimento: serviços completos para acelerar
-            sua jornada digital
-          </p> */}
         </div>
 
         <Carousel
