@@ -33,10 +33,10 @@ const ContactSection = () => {
                   Entre em contato para dúvidas e suporte
                 </h3>
                 <a
-                  href="mailto:cerasos@gmail.com"
+                  href="mailto:cerasosco@gmail.com"
                   className="text-primary hover:text-primary/80 transition-colors"
                 >
-                  cerasos@gmail.com
+                  cerasosco@gmail.com
                 </a>
               </div>
             </CardContent>
@@ -77,12 +77,12 @@ const ContactSection = () => {
                 <div className=" flex flex-col md:flex-row text-muted-foreground">
                   <p>envie seu currículo para {` `}</p>
                   <a
-                    href="mailto:cerasos@gmail.com"
+                    href="mailto:cerasosco@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:text-primary/80 transition-colors md:ml-2"
                   >
-                    cerasos@gmail.com
+                    cerasosco@gmail.com
                   </a>
                 </div>
               </div>
