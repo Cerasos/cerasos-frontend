@@ -55,7 +55,7 @@ const ContactSection = () => {
                   Converse direto com nosso time
                 </h3>
                 <a
-                  href="https://wa.me/5511959463759"
+                  href="https://api.whatsapp.com/send?phone=5511959463759"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:text-primary/80 transition-colors"
