@@ -36,7 +36,7 @@ const Header = () => {
           Serviços
         </button>
         <a
-          href="https://wa.me/5511959463759"
+          href="https://api.whatsapp.com/send?phone=5511959463759"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-row items-center justify-center gap-0 text-sm font-medium text-black transition-colors hover:text-foreground cursor-pointer"
