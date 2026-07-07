@@ -1,50 +1,49 @@
-"use client";
-import React from "react";
-
-import WppIcon from "@/assets/icons/wpp.svg";
 import Image from "next/image";
 
-import LogoFull from "@/assets/logos/logo-full.png";
+import LogoMin from "@/assets/logos/logo-min.png";
+import { WHATSAPP_URL } from "@/lib/contact";
+
+const navItems = [
+  { href: "#produto", label: "Sistema" },
+  { href: "#solucoes", label: "Setores" },
+  { href: "#desenvolvimento-software-itapema", label: "Itapema" },
+];
 
 const Header = () => {
-  const scrollToServices = () => {
-    const services = document.getElementById("services");
-    if (!services) return;
-
-    const headerOffset = 62; // adjust this value
-    const elementPosition = services.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-  };
   return (
-    <header className="fixed min-h-16 w-screen top-0 left-0 px-8 md:px-10 z-50 bg-gray-100 border-b border-gray-400 shadow-lg flex items-center justify-between">
-      <div className="flex flex-col items-center gap-2">
-        <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-lg bg-transparent">
-          <Image src={LogoFull} alt="Cerasos Logo" />
-        </div>
-      </div>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-[#f5f5f7]/78 px-5 py-3 text-[#1d1d1f] backdrop-blur-2xl sm:px-8 lg:px-12">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
+        <a href="#top" className="flex min-w-0 items-center gap-3" aria-label="Ir para o início da página da Cerasos">
+          <span className="flex h-8 w-8 shrink-0 overflow-hidden rounded-md bg-white">
+            <Image
+              src={LogoMin}
+              alt="Logo da Cerasos"
+              width={96}
+              height={96}
+              priority
+              className="scale-[2.2] object-contain"
+            />
+          </span>
+          <span className="text-sm font-semibold">Cerasos</span>
+        </a>
 
-      <nav className=" items-center gap-6 md:flex">
-        <button
-          onClick={scrollToServices}
-          className="hidden md:block text-sm font-medium text-black transition-colors hover:text-foreground cursor-pointer"
-        >
-          Serviços
-        </button>
+        <nav className="hidden items-center gap-8 text-xs font-medium text-[#424245] md:flex" aria-label="Navegação principal">
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href} className="transition hover:text-[#000]">
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
         <a
-          href="https://api.whatsapp.com/send?phone=5511959463759"
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-row items-center justify-center gap-0 text-sm font-medium text-black transition-colors hover:text-foreground cursor-pointer"
+          className="rounded-full bg-[#1d1d1f] px-4 py-2 text-xs font-semibold text-white transition hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8b1a1e]"
         >
-          <Image src={WppIcon} alt="WhatsApp Icon" width={28} height={28} />
-          <span className="hidden md:block">Contato</span>
+          Conversar
         </a>
-      </nav>
+      </div>
     </header>
   );
 };

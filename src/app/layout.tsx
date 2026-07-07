@@ -1,16 +1,54 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Roboto } from "next/font/google";
-import Header from "@/components/header";
+import type { Metadata, Viewport } from "next";
 
-const roboto = Roboto({
-  weight: ["100", "200", "300", "400", "600", "700"], // you can choose multiple weights
-  subsets: ["latin"],
-});
+import Header from "@/components/header";
+import "./globals.css";
+
+const title = "Desenvolvimento de Software em Itapema | Cerasos";
+const description =
+  "A Cerasos cria sistemas inteligentes sob medida, ERP, CRM, automação comercial, sites próprios e inteligência artificial integrada para empresas em Itapema.";
 
 export const metadata: Metadata = {
-  title: "Cerasos",
-  description: "Empresa de soluções",
+  title,
+  description,
+  applicationName: "Cerasos",
+  keywords: [
+    "Desenvolvimento de Software em Itapema",
+    "software sob medida em Itapema",
+    "automação comercial",
+    "sistema gerencial",
+    "ERP",
+    "CRM",
+    "sistema para lojas",
+    "site próprio",
+    "NF-e",
+    "emissor de notas fiscais",
+    "sistema para farmácias",
+    "sistema para imobiliárias",
+    "sistema para restaurantes",
+    "sistema para varejistas",
+    "sistema para comércio geral",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title,
+    description,
+    siteName: "Cerasos",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#f5f5f7",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -19,10 +57,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body
-        className={` ${roboto.className} antialiased scroll-smooth overflow-x-hidden w-screen h-screen`}
-      >
+    <html lang="pt-BR">
+      <body>
         <Header />
         {children}
       </body>
