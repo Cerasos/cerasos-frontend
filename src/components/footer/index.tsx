@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 flex flex-col gap-3 border-t border-[#d2d2d7] pt-5 text-xs sm:flex-row sm:items-center sm:justify-between">
-          <p>Itapema — Santa Catarina</p>
+          <p>Santa Catarina</p>
           <p>© {new Date().getFullYear()} Cerasos. Todos os direitos reservados.</p>
         </div>
       </div>

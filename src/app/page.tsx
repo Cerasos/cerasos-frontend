@@ -105,23 +105,23 @@ const localBusinessSchema = {
   "@type": "ProfessionalService",
   name: "Cerasos",
   description:
-    "Desenvolvimento de Software em Itapema, sistemas inteligentes sob medida, ERP, CRM, automação comercial, sites próprios e inteligência artificial integrada.",
+    "Desenvolvimento de Software em Santa Catarina, sistemas inteligentes sob medida, ERP, CRM, automação comercial, sites próprios e inteligência artificial integrada.",
   areaServed: {
-    "@type": "City",
-    name: "Itapema",
+    "@type": "State",
+    name: "Santa Catarina",
     addressRegion: "SC",
     addressCountry: "BR",
   },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Itapema",
+    addressLocality: "Santa Catarina",
     addressRegion: "SC",
     addressCountry: "BR",
   },
   email: CONTACT_EMAIL,
   telephone: CONTACT_PHONE_TEL,
   serviceType: [
-    "Desenvolvimento de Software em Itapema",
+    "Desenvolvimento de Software em Santa Catarina",
     "Software sob medida",
     "Automação Comercial",
     "Sistema Gerencial",
@@ -143,17 +143,17 @@ export default function Home() {
         <section className="px-5 pb-12 pt-32 text-center sm:px-8 lg:px-12 lg:pb-20">
           <div className="mx-auto max-w-5xl">
             <p className="text-sm font-semibold text-[#8b1a1e]">
-              Itapema — Santa Catarina
+              Santa Catarina
             </p>
             <h1 className="mx-auto mt-5 max-w-5xl text-[clamp(2.45rem,10vw,8rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-[#1d1d1f]">
-              Desenvolvimento de Software em Itapema
+              Desenvolvimento de Software em Santa Catarina
             </h1>
             <p className="mx-auto mt-7 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.03em] text-[#3b3b3f] sm:text-4xl">
               Sistemas inteligentes sob medida para sua empresa
             </p>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#6e6e73]">
               Criamos sistemas personalizados com inteligência artificial integrada
-              para empresas de Itapema e região.
+              para empresas de Santa Catarina.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -293,15 +293,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="desenvolvimento-software-itapema" className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+        <section id="desenvolvimento-software-sc" className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
           <div className="mx-auto max-w-4xl text-center">
             <p className="text-sm font-semibold text-[#8b1a1e]">SEO local</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
-              Desenvolvimento de Software em Itapema para empresas que precisam operar melhor.
+              Desenvolvimento de Software em Santa Catarina para empresas que precisam operar melhor.
             </h2>
             <div className="mx-auto mt-8 space-y-5 text-lg leading-8 text-[#6e6e73]">
               <p>
-                A Cerasos atua com desenvolvimento de software em Itapema para
+                A Cerasos atua com desenvolvimento de software em Santa Catarina para
                 empresas que precisam de sistemas sob medida, automação comercial,
                 sistema gerencial, ERP, CRM e site próprio integrado à operação.
               </p>

@@ -3,17 +3,17 @@ import type { Metadata, Viewport } from "next";
 import Header from "@/components/header";
 import "./globals.css";
 
-const title = "Desenvolvimento de Software em Itapema | Cerasos";
+const title = "Desenvolvimento de Software em Santa Catarina | Cerasos";
 const description =
-  "A Cerasos cria sistemas inteligentes sob medida, ERP, CRM, automação comercial, sites próprios e inteligência artificial integrada para empresas em Itapema.";
+  "A Cerasos cria sistemas inteligentes sob medida, ERP, CRM, automação comercial, sites próprios e inteligência artificial integrada para empresas em Santa Catarina.";
 
 export const metadata: Metadata = {
   title,
   description,
   applicationName: "Cerasos",
   keywords: [
-    "Desenvolvimento de Software em Itapema",
-    "software sob medida em Itapema",
+    "Desenvolvimento de Software em Santa Catarina",
+    "software sob medida em Santa Catarina",
     "automação comercial",
     "sistema gerencial",
     "ERP",

@@ -6,7 +6,7 @@ import { WHATSAPP_URL } from "@/lib/contact";
 const navItems = [
   { href: "#produto", label: "Sistema" },
   { href: "#solucoes", label: "Setores" },
-  { href: "#desenvolvimento-software-itapema", label: "Itapema" },
+  { href: "#desenvolvimento-software-sc", label: "Santa Catarina" },
 ];
 
 const Header = () => {
