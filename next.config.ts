@@ -1,7 +1,12 @@
+import path from "path";
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // a stray lockfile above this directory makes Next infer the wrong root
+  turbopack: {
+    root: path.resolve(__dirname),
+  },
 };
 
 export default nextConfig;
