@@ -20,12 +20,12 @@ export default function RegionSection() {
           Desenvolvimento de software em Santa Catarina para empresas que precisam operar
           melhor.
         </h2>
-        <p className="mx-auto mt-5 text-[15px] leading-[1.75] text-ink/58">
+        <p className="mx-auto mt-5 text-[15px] leading-[1.75] text-ink/58 max-md:text-[16px] max-md:text-ink/65">
           A Cerasos faz desenvolvimento de software em Santa Catarina para empresas que
           precisam de sistema sob medida, automação comercial, site responsivo, ERP, CRM
           e IA aplicada à própria operação.
         </p>
-        <p className="mx-auto mt-3.5 text-[15px] leading-[1.75] text-ink/58">
+        <p className="mx-auto mt-3.5 text-[15px] leading-[1.75] text-ink/58 max-md:text-[16px] max-md:text-ink/65">
           Acompanhamos desde o primeiro diagnóstico até o sistema rodando em produção. No
           fim, sobra menos processo manual e a empresa ganha controle sobre a própria
           operação.

@@ -53,11 +53,25 @@
 @layer base {
   :root {
     color-scheme: light;
+
+    /* Hero geometry, in one place because the four values are coupled: the
+       frame is `--hero-frame-height` tall but only reserves `--hero-frame-box`,
+       and `--hero-overhang` is the top padding AiSection pays that back with.
+       The mobile block below re-derives all four; never move one alone. */
+    --hero-height: calc(100svh - 61px);
+    --hero-frame-box: min(12.6vw, 22vh, 180px);
+    --hero-frame-height: clamp(320px, 42vw, 600px);
+    --hero-overhang: calc(min(29.4vw, 51vh, 420px) + clamp(36px, 4.5vw, 72px));
+
+    --hero-title: min(6.4vw, 8vh, 100px);
+    --hero-sub: min(1.4vw, 2.4vh, 19px);
   }
 
   html {
     scroll-behavior: smooth;
     background: var(--color-paper);
+    /* iOS inflates text on rotate unless told the layout already handles it */
+    -webkit-text-size-adjust: 100%;
   }
 
   /* the sticky header is 61px tall; leave it a little air */
@@ -115,6 +129,82 @@
     /* `backwards` holds the off-screen 0% frame during the delay — without it
        the streak sits parked and untransformed until its animation starts */
     animation: mt-run 4.2s linear var(--delay, 0s) infinite backwards;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Mobile (< 768px). Everything below this line is additive: the desktop
+   cascade above is left exactly as it was, and every override is scoped either
+   to `max-width: 767px` or to a coarse pointer.
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  :root {
+    /* At 328px of usable frame width the screenshots (1586x992, 1.6:1) fit
+       whole, so the mobile frame is sized to their own aspect instead of
+       cropping a desktop UI down to an unreadable strip. */
+    --hero-frame-box: min(24vw, 96px);
+    --hero-frame-height: min(calc((100vw - 62px) / 1.6), 260px);
+    /* 22px = the frame's 2x10px padding plus its 2x1px border */
+    --hero-overhang: calc(
+      var(--hero-frame-height) + 22px - var(--hero-frame-box) +
+        clamp(32px, 9vw, 56px)
+    );
+
+    /* the desktop headline reads 6.4vw, which lands near 25px on a phone;
+       these caps keep it a headline in portrait and clamp it in landscape */
+    --hero-title: min(8.6vw, 9.5vh, 40px);
+    /* the 15px floor is what keeps a 320px screen above the readable minimum */
+    --hero-sub: clamp(15px, 4.3vw, 17px);
+  }
+
+  /* the mobile menu is open — the page behind it must not scroll */
+  body[data-menu-open] {
+    overflow: hidden;
+  }
+}
+
+/* A tablet in portrait clears 768px, so it takes the desktop hero — where the
+   subhead is 1.4vw and lands at 11.5px on an 820px iPad. `pointer: coarse` is
+   the tablet itself: a hybrid laptop reports its mouse as the primary pointer
+   and keeps the desktop value untouched. */
+@media (min-width: 768px) and (pointer: coarse) {
+  :root {
+    --hero-sub: clamp(16px, 1.4vw, 19px);
+  }
+}
+
+/* A phone in landscape is ~844x390: wide enough to read as desktop, short
+   enough that the hero's vh-driven type collapses to ~9px and the frame
+   overhangs further than AiSection pays back. Gating on height AND a coarse
+   pointer means only handhelds match — no monitor is 520px tall. */
+@media (max-height: 520px) and (pointer: coarse) {
+  :root {
+    --hero-height: auto;
+    --hero-frame-box: min(18vh, 96px);
+    --hero-frame-height: min(calc((100vw - 62px) / 1.6), 46vh);
+    --hero-overhang: calc(
+      var(--hero-frame-height) + 22px - var(--hero-frame-box) +
+        clamp(28px, 5vw, 56px)
+    );
+    --hero-title: min(6.4vw, 34px);
+    --hero-sub: clamp(15px, 1.9vw, 16px);
+  }
+}
+
+@media (pointer: coarse) {
+  a,
+  button {
+    /* kills the 300ms synthetic-click wait and the grey flash on tap; the
+       :active states in the markup carry the feedback instead */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* let a horizontal drag reach the carousel's swipe handler while a vertical
+     drag still scrolls the page */
+  .swipe-x {
+    touch-action: pan-y;
   }
 }
 

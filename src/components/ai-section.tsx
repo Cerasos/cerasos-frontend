@@ -3,8 +3,7 @@ import Image from "next/image";
 import Reveal from "@/components/reveal";
 
 /** Clears the hero frame's overhang — paired with `HERO_FRAME_BOX`/`HERO_FRAME_HEIGHT`. */
-const HERO_OVERHANG =
-  "calc(min(29.4vw, 51vh, 420px) + clamp(36px, 4.5vw, 72px))";
+const HERO_OVERHANG = "var(--hero-overhang)";
 
 export default function AiSection() {
   return (
@@ -35,15 +34,17 @@ export default function AiSection() {
           </Reveal>
 
           <Reveal delay={280}>
-            <p className="mx-auto mt-4 max-w-[56ch] text-[15px] leading-[1.7] text-paper/60">
+            <p className="mx-auto mt-4 max-w-[56ch] text-[15px] leading-[1.7] text-paper/60 max-md:text-[16px] max-md:text-paper/70">
               Os agentes atendem no WhatsApp, qualificam o lead, atualizam o CRM
               e devolvem o resumo pronto. Tudo dentro do mesmo sistema, com os
               dados do seu negócio.
             </p>
           </Reveal>
 
+          {/* the source is a 1586x992 desktop capture, so on a phone it runs
+              edge to edge at its own aspect — the widest it can legibly be */}
           <Reveal delay={360} className="mt-10">
-            <div className="relative aspect-[16/8.6] overflow-hidden rounded-media bg-paper">
+            <div className="relative aspect-[16/8.6] overflow-hidden rounded-media bg-paper max-md:-mx-[clamp(16px,4vw,48px)] max-md:aspect-[16/10] max-md:rounded-none">
               <Image
                 src="/screenshots/hero-suite.png"
                 alt="Painel gerencial da Cerasos com faturamento, funil de vendas e estoque em uma só tela"

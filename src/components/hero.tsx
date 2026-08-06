@@ -6,22 +6,22 @@ import { WHATSAPP_URL } from "@/lib/contact";
 /**
  * The frame is taller than the box that reserves space for it, so it hangs past
  * the fold on purpose. `AiSection` pays the difference back in top padding —
- * the two magic numbers are paired and must move together.
+ * the two magic numbers are paired and must move together. Both live in
+ * `globals.css`, which also re-derives them for phones.
  */
-export const HERO_FRAME_BOX = "min(12.6vw, 22vh, 180px)";
-export const HERO_FRAME_HEIGHT = "clamp(320px, 42vw, 600px)";
+export const HERO_FRAME_BOX = "var(--hero-frame-box)";
+export const HERO_FRAME_HEIGHT = "var(--hero-frame-height)";
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex flex-col items-center text-center"
       /* svh, not vh: a mobile URL bar collapsing mid-scroll would otherwise
-         resize the hero and shove the overhanging frame around */
-      style={{
-        height: "calc(100svh - 61px)",
-        padding: "0 clamp(20px, 5vw, 64px)",
-      }}
+         resize the hero and shove the overhanging frame around. Below md the
+         height becomes a floor, so a long headline in landscape grows the
+         section instead of spilling out of it. */
+      className="relative flex h-[var(--hero-height)] flex-col items-center text-center max-md:h-auto max-md:min-h-[var(--hero-height)]"
+      style={{ padding: "0 clamp(20px, 5vw, 64px)" }}
     >
       <Meteors />
 
@@ -31,7 +31,7 @@ export default function Hero() {
       >
         <a
           href="#setores"
-          className="anim-rise inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/80 px-4 py-[7px] text-[14px] transition-colors hover:border-accent/80"
+          className="anim-rise inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/80 px-4 py-[7px] text-[14px] transition-colors hover:border-accent/80 active:border-accent/80 max-md:px-[18px] max-md:py-[13px] max-md:text-[15px]"
           style={{ "--dur": "0.7s", "--delay": "0.1s" } as React.CSSProperties}
         >
           <span className="text-accent">&#9670;</span> Conheça o sistema Cerasos{" "}
@@ -43,7 +43,7 @@ export default function Hero() {
           style={
             {
               margin: "min(2.6vh, 22px) 0 0 0",
-              fontSize: "min(6.4vw, 8vh, 100px)",
+              fontSize: "var(--hero-title)",
               lineHeight: 0.95,
               letterSpacing: "-0.04em",
               "--dur": "0.95s",
@@ -59,7 +59,7 @@ export default function Hero() {
           style={
             {
               margin: "min(2.2vh, 20px) 0 0 0",
-              fontSize: "min(1.4vw, 2.4vh, 19px)",
+              fontSize: "var(--hero-sub)",
               lineHeight: 1.55,
               "--dur": "0.9s",
               "--delay": "0.42s",

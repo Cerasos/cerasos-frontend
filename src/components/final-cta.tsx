@@ -5,11 +5,9 @@ export default function FinalCta() {
   return (
     <section
       id="contato"
-      className="flex flex-col items-center justify-center gap-[22px] border-t border-ink/7 text-center"
-      style={{
-        minHeight: "min(78vh, 720px)",
-        padding: "clamp(104px, 13vw, 180px) clamp(16px, 4vw, 48px)",
-      }}
+      /* the desktop block reserves 78vh of air around three lines of copy; on a
+         phone that much emptiness reads as a loading state, so it tightens */
+      className="flex min-h-[min(78vh,720px)] flex-col items-center justify-center gap-[22px] border-t border-ink/7 px-[clamp(16px,4vw,48px)] py-[clamp(104px,13vw,180px)] text-center max-md:min-h-[min(62svh,480px)] max-md:gap-[18px] max-md:py-[84px]"
     >
       <Reveal delay={100}>
         <h2
@@ -26,7 +24,7 @@ export default function FinalCta() {
       </Reveal>
 
       <Reveal delay={210}>
-        <p className="max-w-[50ch] text-[15px] leading-[1.7] text-ink/58">
+        <p className="max-w-[50ch] text-[15px] leading-[1.7] text-ink/58 max-md:text-[16px] max-md:text-ink/65">
           Conte qual parte da operação precisa funcionar melhor. Devolvemos escopo,
           prazo e um protótipo navegável para você testar.
         </p>
